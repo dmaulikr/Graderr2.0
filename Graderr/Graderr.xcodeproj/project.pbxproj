@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67E3ED234B683C1B7E39FD2D /* Pods_GraderrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6781BB1CC56AC395C2E8D3 /* Pods_GraderrUITests.framework */; };
+		6A172A96AAC8C5D9621945E2 /* Pods_GraderrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66CB92947122E8EAB321995 /* Pods_GraderrTests.framework */; };
+		EA08A30A1F39DCF3007F8E12 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A3091F39DCF3007F8E12 /* Course.swift */; };
+		EA08A30D1F39DEE1007F8E12 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A30C1F39DEE1007F8E12 /* Student.swift */; };
+		EA08A30F1F39DFCA007F8E12 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A30E1F39DFCA007F8E12 /* Teacher.swift */; };
+		EA08A3111F39E09B007F8E12 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A3101F39E09B007F8E12 /* Review.swift */; };
+		EA08A3131F39E3A3007F8E12 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A3121F39E3A3007F8E12 /* Field.swift */; };
 		EAB3B3E31F39D99900F61136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E21F39D99900F61136 /* AppDelegate.swift */; };
 		EAB3B3E51F39D99900F61136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E41F39D99900F61136 /* ViewController.swift */; };
 		EAB3B3E81F39D99900F61136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB3B3E61F39D99900F61136 /* Main.storyboard */; };
@@ -15,6 +22,7 @@
 		EAB3B3F01F39D99900F61136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB3B3EE1F39D99900F61136 /* LaunchScreen.storyboard */; };
 		EAB3B3FB1F39D99900F61136 /* GraderrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3FA1F39D99900F61136 /* GraderrTests.swift */; };
 		EAB3B4061F39D99900F61136 /* GraderrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B4051F39D99900F61136 /* GraderrUITests.swift */; };
+		F00C250D0CC3D658B1948E88 /* Pods_Graderr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEB0857FE4FAA21A0F83AED /* Pods_Graderr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D6781BB1CC56AC395C2E8D3 /* Pods_GraderrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraderrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23278380DD3513F29D1377D4 /* Pods-Graderr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graderr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graderr/Pods-Graderr.release.xcconfig"; sourceTree = "<group>"; };
+		3935FE4F0AB064AC6054B69C /* Pods-GraderrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrUITests/Pods-GraderrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F38DF9A63440734089C3F7C /* Pods-GraderrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrTests/Pods-GraderrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		801733F266DE06FFDD7A0175 /* Pods-GraderrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrUITests/Pods-GraderrUITests.release.xcconfig"; sourceTree = "<group>"; };
+		953DCFBA87CF01A7C13741A1 /* Pods-GraderrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrTests/Pods-GraderrTests.release.xcconfig"; sourceTree = "<group>"; };
+		BBEB0857FE4FAA21A0F83AED /* Pods_Graderr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Graderr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66CB92947122E8EAB321995 /* Pods_GraderrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraderrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA08A3091F39DCF3007F8E12 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		EA08A30C1F39DEE1007F8E12 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		EA08A30E1F39DFCA007F8E12 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		EA08A3101F39E09B007F8E12 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		EA08A3121F39E3A3007F8E12 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		EAB3B3DF1F39D99900F61136 /* Graderr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graderr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB3B3E21F39D99900F61136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAB3B3E41F39D99900F61136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +70,7 @@
 		EAB3B4011F39D99900F61136 /* GraderrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraderrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB3B4051F39D99900F61136 /* GraderrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraderrUITests.swift; sourceTree = "<group>"; };
 		EAB3B4071F39D99900F61136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0E67FC3F7C4E4F663E7C61 /* Pods-Graderr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graderr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graderr/Pods-Graderr.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00C250D0CC3D658B1948E88 /* Pods_Graderr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A172A96AAC8C5D9621945E2 /* Pods_GraderrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +94,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E3ED234B683C1B7E39FD2D /* Pods_GraderrUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53E4E0B7A1B1F08C1A02EB14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB0857FE4FAA21A0F83AED /* Pods_Graderr.framework */,
+				E66CB92947122E8EAB321995 /* Pods_GraderrTests.framework */,
+				1D6781BB1CC56AC395C2E8D3 /* Pods_GraderrUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		589DE07BDDF6CA55D2AFCFBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E67FC3F7C4E4F663E7C61 /* Pods-Graderr.debug.xcconfig */,
+				23278380DD3513F29D1377D4 /* Pods-Graderr.release.xcconfig */,
+				6F38DF9A63440734089C3F7C /* Pods-GraderrTests.debug.xcconfig */,
+				953DCFBA87CF01A7C13741A1 /* Pods-GraderrTests.release.xcconfig */,
+				3935FE4F0AB064AC6054B69C /* Pods-GraderrUITests.debug.xcconfig */,
+				801733F266DE06FFDD7A0175 /* Pods-GraderrUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA08A3061F39DC44007F8E12 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EAB3B3EE1F39D99900F61136 /* LaunchScreen.storyboard */,
+				EAB3B3E61F39D99900F61136 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		EA08A3071F39DC4C007F8E12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAB3B3E41F39D99900F61136 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EA08A3081F39DC91007F8E12 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				EAB3B3E21F39D99900F61136 /* AppDelegate.swift */,
+				EAB3B3F11F39D99900F61136 /* Info.plist */,
+				EAB3B3E91F39D99900F61136 /* Graderr.xcdatamodeld */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		EA08A30B1F39DCFF007F8E12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA08A3091F39DCF3007F8E12 /* Course.swift */,
+				EA08A3101F39E09B007F8E12 /* Review.swift */,
+				EA08A3121F39E3A3007F8E12 /* Field.swift */,
+				EA08A30E1F39DFCA007F8E12 /* Teacher.swift */,
+				EA08A30C1F39DEE1007F8E12 /* Student.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		EAB3B3D61F39D99900F61136 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +170,8 @@
 				EAB3B3F91F39D99900F61136 /* GraderrTests */,
 				EAB3B4041F39D99900F61136 /* GraderrUITests */,
 				EAB3B3E01F39D99900F61136 /* Products */,
+				589DE07BDDF6CA55D2AFCFBF /* Pods */,
+				53E4E0B7A1B1F08C1A02EB14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +188,11 @@
 		EAB3B3E11F39D99900F61136 /* Graderr */ = {
 			isa = PBXGroup;
 			children = (
-				EAB3B3E21F39D99900F61136 /* AppDelegate.swift */,
-				EAB3B3E41F39D99900F61136 /* ViewController.swift */,
-				EAB3B3E61F39D99900F61136 /* Main.storyboard */,
+				EA08A30B1F39DCFF007F8E12 /* Models */,
+				EA08A3081F39DC91007F8E12 /* Supporting */,
+				EA08A3071F39DC4C007F8E12 /* Controllers */,
+				EA08A3061F39DC44007F8E12 /* Storyboards */,
 				EAB3B3EC1F39D99900F61136 /* Assets.xcassets */,
-				EAB3B3EE1F39D99900F61136 /* LaunchScreen.storyboard */,
-				EAB3B3F11F39D99900F61136 /* Info.plist */,
-				EAB3B3E91F39D99900F61136 /* Graderr.xcdatamodeld */,
 			);
 			path = Graderr;
 			sourceTree = "<group>";
@@ -135,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAB3B40A1F39D99900F61136 /* Build configuration list for PBXNativeTarget "Graderr" */;
 			buildPhases = (
+				50DD2540F64CA2C555E84BF8 /* [CP] Check Pods Manifest.lock */,
 				EAB3B3DB1F39D99900F61136 /* Sources */,
 				EAB3B3DC1F39D99900F61136 /* Frameworks */,
 				EAB3B3DD1F39D99900F61136 /* Resources */,
+				EC96E84ED7B597EE2E838419 /* [CP] Embed Pods Frameworks */,
+				87A9B1B19CA806E97FC5AC4B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAB3B40D1F39D99900F61136 /* Build configuration list for PBXNativeTarget "GraderrTests" */;
 			buildPhases = (
+				6336BBA43C3FEB36DF35FE1D /* [CP] Check Pods Manifest.lock */,
 				EAB3B3F21F39D99900F61136 /* Sources */,
 				EAB3B3F31F39D99900F61136 /* Frameworks */,
 				EAB3B3F41F39D99900F61136 /* Resources */,
+				CF062A970336A1EB0C554CD3 /* [CP] Embed Pods Frameworks */,
+				A67D9509FF396A30B952B1F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAB3B4101F39D99900F61136 /* Build configuration list for PBXNativeTarget "GraderrUITests" */;
 			buildPhases = (
+				C30E2117AA8E727588172805 /* [CP] Check Pods Manifest.lock */,
 				EAB3B3FD1F39D99900F61136 /* Sources */,
 				EAB3B3FE1F39D99900F61136 /* Frameworks */,
 				EAB3B3FF1F39D99900F61136 /* Resources */,
+				AD474F504AF459A92ED95567 /* [CP] Embed Pods Frameworks */,
+				3FE26FB623B35BCDABA93A01 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,13 +356,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3FE26FB623B35BCDABA93A01 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraderrUITests/Pods-GraderrUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50DD2540F64CA2C555E84BF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6336BBA43C3FEB36DF35FE1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		87A9B1B19CA806E97FC5AC4B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graderr/Pods-Graderr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A67D9509FF396A30B952B1F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraderrTests/Pods-GraderrTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD474F504AF459A92ED95567 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraderrUITests/Pods-GraderrUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C30E2117AA8E727588172805 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF062A970336A1EB0C554CD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraderrTests/Pods-GraderrTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC96E84ED7B597EE2E838419 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graderr/Pods-Graderr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EAB3B3DB1F39D99900F61136 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA08A30F1F39DFCA007F8E12 /* Teacher.swift in Sources */,
+				EA08A30A1F39DCF3007F8E12 /* Course.swift in Sources */,
+				EA08A3131F39E3A3007F8E12 /* Field.swift in Sources */,
+				EA08A3111F39E09B007F8E12 /* Review.swift in Sources */,
 				EAB3B3EB1F39D99900F61136 /* Graderr.xcdatamodeld in Sources */,
 				EAB3B3E51F39D99900F61136 /* ViewController.swift in Sources */,
+				EA08A30D1F39DEE1007F8E12 /* Student.swift in Sources */,
 				EAB3B3E31F39D99900F61136 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +656,7 @@
 		};
 		EAB3B40B1F39D99900F61136 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB0E67FC3F7C4E4F663E7C61 /* Pods-Graderr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3K4TLB79RR;
@@ -430,6 +670,7 @@
 		};
 		EAB3B40C1F39D99900F61136 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23278380DD3513F29D1377D4 /* Pods-Graderr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3K4TLB79RR;
@@ -443,6 +684,7 @@
 		};
 		EAB3B40E1F39D99900F61136 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F38DF9A63440734089C3F7C /* Pods-GraderrTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +700,7 @@
 		};
 		EAB3B40F1F39D99900F61136 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953DCFBA87CF01A7C13741A1 /* Pods-GraderrTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +716,7 @@
 		};
 		EAB3B4111F39D99900F61136 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3935FE4F0AB064AC6054B69C /* Pods-GraderrUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3K4TLB79RR;
@@ -487,6 +731,7 @@
 		};
 		EAB3B4121F39D99900F61136 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 801733F266DE06FFDD7A0175 /* Pods-GraderrUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3K4TLB79RR;
@@ -518,6 +763,7 @@
 				EAB3B40C1F39D99900F61136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAB3B40D1F39D99900F61136 /* Build configuration list for PBXNativeTarget "GraderrTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +772,7 @@
 				EAB3B40F1F39D99900F61136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAB3B4101F39D99900F61136 /* Build configuration list for PBXNativeTarget "GraderrUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +781,7 @@
 				EAB3B4121F39D99900F61136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
