@@ -6,6 +6,7 @@
 //  Copyright © 2017 Sean Strong. All rights reserved.
 //
 
+
 import Foundation
 
 class Course {

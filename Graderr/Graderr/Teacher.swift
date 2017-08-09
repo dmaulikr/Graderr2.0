@@ -16,6 +16,18 @@ class Teacher {
     let teacherID : String
     let courses : [Course]
     
+    init (firstName: String, lastName : String, fullName: String, teacherID: String, courses: [Course]) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.fullName = fullName
+        self.teacherID = teacherID
+        self.courses = courses
+    }
+    
+    convenience init (firstName: String, lastName: String, teacherID: String) {
+        self.init(firstName: firstName, lastName: lastName, fullName: firstName + " " + lastName, teacherID: teacherID, courses: [])
+    }
+    
     
     
     

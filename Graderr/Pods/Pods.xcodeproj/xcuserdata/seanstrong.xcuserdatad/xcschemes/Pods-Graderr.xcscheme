@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DADFC2C49C8901C30D7A89329BCD4E7B"
+               BlueprintIdentifier = "EC407CD7DCC32E52D2FDBCD998AABDE9"
                BuildableName = "Pods_Graderr.framework"
                BlueprintName = "Pods-Graderr"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DADFC2C49C8901C30D7A89329BCD4E7B"
+            BlueprintIdentifier = "EC407CD7DCC32E52D2FDBCD998AABDE9"
             BuildableName = "Pods_Graderr.framework"
             BlueprintName = "Pods-Graderr"
             ReferencedContainer = "container:Pods.xcodeproj">

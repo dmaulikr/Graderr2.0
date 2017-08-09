@@ -14,6 +14,11 @@
 		EA08A30F1F39DFCA007F8E12 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A30E1F39DFCA007F8E12 /* Teacher.swift */; };
 		EA08A3111F39E09B007F8E12 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A3101F39E09B007F8E12 /* Review.swift */; };
 		EA08A3131F39E3A3007F8E12 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A3121F39E3A3007F8E12 /* Field.swift */; };
+		EA1306B81F3B283A002F30A6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1306B71F3B283A002F30A6 /* CoreData.framework */; };
+		EA1306BA1F3B2973002F30A6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1306B91F3B2973002F30A6 /* Login.storyboard */; };
+		EA1306BC1F3B2983002F30A6 /* StudentInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1306BB1F3B2983002F30A6 /* StudentInterface.storyboard */; };
+		EA1306BE1F3B2992002F30A6 /* TeacherInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1306BD1F3B2992002F30A6 /* TeacherInterface.storyboard */; };
+		EA1306C01F3B29D6002F30A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1306BF1F3B29D6002F30A6 /* LoginViewController.swift */; };
 		EAB3B3E31F39D99900F61136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E21F39D99900F61136 /* AppDelegate.swift */; };
 		EAB3B3E51F39D99900F61136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E41F39D99900F61136 /* ViewController.swift */; };
 		EAB3B3E81F39D99900F61136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB3B3E61F39D99900F61136 /* Main.storyboard */; };
@@ -44,11 +49,9 @@
 
 /* Begin PBXFileReference section */
 		1D6781BB1CC56AC395C2E8D3 /* Pods_GraderrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraderrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23278380DD3513F29D1377D4 /* Pods-Graderr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graderr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graderr/Pods-Graderr.release.xcconfig"; sourceTree = "<group>"; };
-		3935FE4F0AB064AC6054B69C /* Pods-GraderrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrUITests/Pods-GraderrUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		6F38DF9A63440734089C3F7C /* Pods-GraderrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrTests/Pods-GraderrTests.debug.xcconfig"; sourceTree = "<group>"; };
-		801733F266DE06FFDD7A0175 /* Pods-GraderrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrUITests/Pods-GraderrUITests.release.xcconfig"; sourceTree = "<group>"; };
-		953DCFBA87CF01A7C13741A1 /* Pods-GraderrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrTests/Pods-GraderrTests.release.xcconfig"; sourceTree = "<group>"; };
+		46035A690C086BB932353C19 /* Pods-GraderrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrUITests/Pods-GraderrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6495A5757EAF804F94DA0C51 /* Pods-Graderr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graderr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graderr/Pods-Graderr.debug.xcconfig"; sourceTree = "<group>"; };
+		68FF6D8D1EE5E651A318780E /* Pods-GraderrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrTests/Pods-GraderrTests.release.xcconfig"; sourceTree = "<group>"; };
 		BBEB0857FE4FAA21A0F83AED /* Pods_Graderr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Graderr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66CB92947122E8EAB321995 /* Pods_GraderrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraderrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08A3091F39DCF3007F8E12 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -56,6 +59,11 @@
 		EA08A30E1F39DFCA007F8E12 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		EA08A3101F39E09B007F8E12 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		EA08A3121F39E3A3007F8E12 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		EA1306B71F3B283A002F30A6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EA1306B91F3B2973002F30A6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EA1306BB1F3B2983002F30A6 /* StudentInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentInterface.storyboard; sourceTree = "<group>"; };
+		EA1306BD1F3B2992002F30A6 /* TeacherInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherInterface.storyboard; sourceTree = "<group>"; };
+		EA1306BF1F3B29D6002F30A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EAB3B3DF1F39D99900F61136 /* Graderr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graderr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB3B3E21F39D99900F61136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAB3B3E41F39D99900F61136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +78,9 @@
 		EAB3B4011F39D99900F61136 /* GraderrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraderrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB3B4051F39D99900F61136 /* GraderrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraderrUITests.swift; sourceTree = "<group>"; };
 		EAB3B4071F39D99900F61136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB0E67FC3F7C4E4F663E7C61 /* Pods-Graderr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graderr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graderr/Pods-Graderr.debug.xcconfig"; sourceTree = "<group>"; };
+		F687BE3D13C7DC66EC8FAFC4 /* Pods-GraderrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrTests/Pods-GraderrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA275949D18E2DDCD94541C6 /* Pods-Graderr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graderr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graderr/Pods-Graderr.release.xcconfig"; sourceTree = "<group>"; };
+		FDEE9318BF613630F24623FD /* Pods-GraderrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraderrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraderrUITests/Pods-GraderrUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1306B81F3B283A002F30A6 /* CoreData.framework in Frameworks */,
 				F00C250D0CC3D658B1948E88 /* Pods_Graderr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +115,7 @@
 		53E4E0B7A1B1F08C1A02EB14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA1306B71F3B283A002F30A6 /* CoreData.framework */,
 				BBEB0857FE4FAA21A0F83AED /* Pods_Graderr.framework */,
 				E66CB92947122E8EAB321995 /* Pods_GraderrTests.framework */,
 				1D6781BB1CC56AC395C2E8D3 /* Pods_GraderrUITests.framework */,
@@ -111,15 +123,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		589DE07BDDF6CA55D2AFCFBF /* Pods */ = {
+		C33721F27200B8D8668158EB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FB0E67FC3F7C4E4F663E7C61 /* Pods-Graderr.debug.xcconfig */,
-				23278380DD3513F29D1377D4 /* Pods-Graderr.release.xcconfig */,
-				6F38DF9A63440734089C3F7C /* Pods-GraderrTests.debug.xcconfig */,
-				953DCFBA87CF01A7C13741A1 /* Pods-GraderrTests.release.xcconfig */,
-				3935FE4F0AB064AC6054B69C /* Pods-GraderrUITests.debug.xcconfig */,
-				801733F266DE06FFDD7A0175 /* Pods-GraderrUITests.release.xcconfig */,
+				6495A5757EAF804F94DA0C51 /* Pods-Graderr.debug.xcconfig */,
+				FA275949D18E2DDCD94541C6 /* Pods-Graderr.release.xcconfig */,
+				F687BE3D13C7DC66EC8FAFC4 /* Pods-GraderrTests.debug.xcconfig */,
+				68FF6D8D1EE5E651A318780E /* Pods-GraderrTests.release.xcconfig */,
+				46035A690C086BB932353C19 /* Pods-GraderrUITests.debug.xcconfig */,
+				FDEE9318BF613630F24623FD /* Pods-GraderrUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -129,6 +141,9 @@
 			children = (
 				EAB3B3EE1F39D99900F61136 /* LaunchScreen.storyboard */,
 				EAB3B3E61F39D99900F61136 /* Main.storyboard */,
+				EA1306B91F3B2973002F30A6 /* Login.storyboard */,
+				EA1306BB1F3B2983002F30A6 /* StudentInterface.storyboard */,
+				EA1306BD1F3B2992002F30A6 /* TeacherInterface.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -136,6 +151,7 @@
 		EA08A3071F39DC4C007F8E12 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA1306C11F3B29DF002F30A6 /* Login */,
 				EAB3B3E41F39D99900F61136 /* ViewController.swift */,
 			);
 			name = Controllers;
@@ -163,6 +179,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		EA1306C11F3B29DF002F30A6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EA1306BF1F3B29D6002F30A6 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		EAB3B3D61F39D99900F61136 = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +194,8 @@
 				EAB3B3F91F39D99900F61136 /* GraderrTests */,
 				EAB3B4041F39D99900F61136 /* GraderrUITests */,
 				EAB3B3E01F39D99900F61136 /* Products */,
-				589DE07BDDF6CA55D2AFCFBF /* Pods */,
 				53E4E0B7A1B1F08C1A02EB14 /* Frameworks */,
+				C33721F27200B8D8668158EB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -334,8 +358,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1306BA1F3B2973002F30A6 /* Login.storyboard in Resources */,
 				EAB3B3F01F39D99900F61136 /* LaunchScreen.storyboard in Resources */,
 				EAB3B3ED1F39D99900F61136 /* Assets.xcassets in Resources */,
+				EA1306BE1F3B2992002F30A6 /* TeacherInterface.storyboard in Resources */,
+				EA1306BC1F3B2983002F30A6 /* StudentInterface.storyboard in Resources */,
 				EAB3B3E81F39D99900F61136 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1306C01F3B29D6002F30A6 /* LoginViewController.swift in Sources */,
 				EA08A30F1F39DFCA007F8E12 /* Teacher.swift in Sources */,
 				EA08A30A1F39DCF3007F8E12 /* Course.swift in Sources */,
 				EA08A3131F39E3A3007F8E12 /* Field.swift in Sources */,
@@ -565,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -602,9 +631,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -615,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -646,8 +676,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -656,35 +687,39 @@
 		};
 		EAB3B40B1F39D99900F61136 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB0E67FC3F7C4E4F663E7C61 /* Pods-Graderr.debug.xcconfig */;
+			baseConfigurationReference = 6495A5757EAF804F94DA0C51 /* Pods-Graderr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3K4TLB79RR;
 				INFOPLIST_FILE = Graderr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ststrong.Graderr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
 		EAB3B40C1F39D99900F61136 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23278380DD3513F29D1377D4 /* Pods-Graderr.release.xcconfig */;
+			baseConfigurationReference = FA275949D18E2DDCD94541C6 /* Pods-Graderr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3K4TLB79RR;
 				INFOPLIST_FILE = Graderr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ststrong.Graderr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
 		EAB3B40E1F39D99900F61136 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F38DF9A63440734089C3F7C /* Pods-GraderrTests.debug.xcconfig */;
+			baseConfigurationReference = F687BE3D13C7DC66EC8FAFC4 /* Pods-GraderrTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -700,7 +735,7 @@
 		};
 		EAB3B40F1F39D99900F61136 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 953DCFBA87CF01A7C13741A1 /* Pods-GraderrTests.release.xcconfig */;
+			baseConfigurationReference = 68FF6D8D1EE5E651A318780E /* Pods-GraderrTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -716,7 +751,7 @@
 		};
 		EAB3B4111F39D99900F61136 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3935FE4F0AB064AC6054B69C /* Pods-GraderrUITests.debug.xcconfig */;
+			baseConfigurationReference = 46035A690C086BB932353C19 /* Pods-GraderrUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3K4TLB79RR;
@@ -731,7 +766,7 @@
 		};
 		EAB3B4121F39D99900F61136 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 801733F266DE06FFDD7A0175 /* Pods-GraderrUITests.release.xcconfig */;
+			baseConfigurationReference = FDEE9318BF613630F24623FD /* Pods-GraderrUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3K4TLB79RR;

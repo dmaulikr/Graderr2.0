@@ -9,7 +9,6 @@ target 'Graderr' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'Google/SignIn'
   pod 'Kingfisher', '~> 3.0'
 
   # Pods for Graderr
