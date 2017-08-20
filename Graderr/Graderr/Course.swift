@@ -8,25 +8,42 @@
 
 
 import Foundation
+import FirebaseDatabase.FIRDataSnapshot
 
 class Course {
     
     let title : String
-    let teacher : Teacher
-    let period : Int?
-    let averageRating : Double?
-    let students : [Student]
+    let schoolID : String
+    let courseID : String
+    let teacherID : String
+    let studentIDs : [String]
     
-    init (title: String, teacher : Teacher, students : [Student], averageRating : Double?, period : Int?) {
+    init (title: String, teacherID : String, courseID : String, schoolID : String, studentIDs : [String] = []) {
         self.title = title
-        self.teacher = teacher
-        self.students = students
-        self.averageRating = averageRating
-        self.period = period
+        self.courseID = courseID
+        self.teacherID = teacherID
+        self.studentIDs = studentIDs
+        self.schoolID = schoolID
     }
     
-    convenience init (title: String, teacher: Teacher, period: Int?) {
-        self.init(title: title, teacher: teacher, students: [], averageRating: nil, period: period)
+    init?(snapshot: DataSnapshot) {
+        guard let dict = snapshot.value as? [String : Any],
+            let title = dict["title"] as? String,
+            let teacherID = dict["teacherID"] as? String,
+            let schoolID = dict["schoolID"] as? String
+            else { return nil }
+        self.title = title
+        self.teacherID = teacherID
+        self.schoolID = schoolID
+        self.courseID = snapshot.key
+
+        if let studentSnapshots = dict["students"] as? [String: String]{ //[UID: Name]
+            self.studentIDs = Array(studentSnapshots.keys)
+        } else {
+            self.studentIDs = []
+            print("This course has no students enrolled!")
+        }
     }
+    
     
 }
