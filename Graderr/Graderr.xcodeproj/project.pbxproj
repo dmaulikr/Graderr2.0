@@ -16,8 +16,8 @@
 		EA08A3131F39E3A3007F8E12 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08A3121F39E3A3007F8E12 /* Field.swift */; };
 		EA1306B81F3B283A002F30A6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1306B71F3B283A002F30A6 /* CoreData.framework */; };
 		EA1306BA1F3B2973002F30A6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1306B91F3B2973002F30A6 /* Login.storyboard */; };
-		EA1306BC1F3B2983002F30A6 /* StudentInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1306BB1F3B2983002F30A6 /* StudentInterface.storyboard */; };
-		EA1306BE1F3B2992002F30A6 /* TeacherInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1306BD1F3B2992002F30A6 /* TeacherInterface.storyboard */; };
+		EA1306BC1F3B2983002F30A6 /* TeacherInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1306BB1F3B2983002F30A6 /* TeacherInterface.storyboard */; };
+		EA1306BE1F3B2992002F30A6 /* StudentInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1306BD1F3B2992002F30A6 /* StudentInterface.storyboard */; };
 		EA1306C01F3B29D6002F30A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1306BF1F3B29D6002F30A6 /* LoginViewController.swift */; };
 		EA1306C51F3C839F002F30A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA1306C41F3C839F002F30A6 /* GoogleService-Info.plist */; };
 		EA1306C61F3C839F002F30A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA1306C41F3C839F002F30A6 /* GoogleService-Info.plist */; };
@@ -25,8 +25,14 @@
 		EA1306C91F3C8446002F30A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1306C81F3C8446002F30A6 /* Constants.swift */; };
 		EA1306CA1F3C8446002F30A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1306C81F3C8446002F30A6 /* Constants.swift */; };
 		EA1306CB1F3C8446002F30A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1306C81F3C8446002F30A6 /* Constants.swift */; };
+		EA4EC4B21F4C4C4E008F43A1 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EC4B11F4C4C4E008F43A1 /* StudentTableViewCell.swift */; };
+		EA4EC4B51F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EC4B41F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift */; };
+		EA4EC4B81F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EC4B71F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift */; };
+		EA4EC4BA1F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EC4B91F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift */; };
+		EA545A4C1F4C555C0045D22E /* PollCreationInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA545A4B1F4C555C0045D22E /* PollCreationInterface.storyboard */; };
+		EA545A4E1F4C55800045D22E /* StudentPollingInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA545A4D1F4C55800045D22E /* StudentPollingInterface.storyboard */; };
+		EA545A501F4C55A50045D22E /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A4F1F4C55A50045D22E /* ReviewService.swift */; };
 		EAB3B3E31F39D99900F61136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E21F39D99900F61136 /* AppDelegate.swift */; };
-		EAB3B3E81F39D99900F61136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB3B3E61F39D99900F61136 /* Main.storyboard */; };
 		EAB3B3EB1F39D99900F61136 /* Graderr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E91F39D99900F61136 /* Graderr.xcdatamodeld */; };
 		EAB3B3ED1F39D99900F61136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB3B3EC1F39D99900F61136 /* Assets.xcassets */; };
 		EAB3B3F01F39D99900F61136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB3B3EE1F39D99900F61136 /* LaunchScreen.storyboard */; };
@@ -73,14 +79,20 @@
 		EA08A3121F39E3A3007F8E12 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		EA1306B71F3B283A002F30A6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EA1306B91F3B2973002F30A6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		EA1306BB1F3B2983002F30A6 /* StudentInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentInterface.storyboard; sourceTree = "<group>"; };
-		EA1306BD1F3B2992002F30A6 /* TeacherInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherInterface.storyboard; sourceTree = "<group>"; };
+		EA1306BB1F3B2983002F30A6 /* TeacherInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherInterface.storyboard; sourceTree = "<group>"; };
+		EA1306BD1F3B2992002F30A6 /* StudentInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentInterface.storyboard; sourceTree = "<group>"; };
 		EA1306BF1F3B29D6002F30A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA1306C41F3C839F002F30A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA1306C81F3C8446002F30A6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EA4EC4B11F4C4C4E008F43A1 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		EA4EC4B41F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInterfaceTableViewController.swift; sourceTree = "<group>"; };
+		EA4EC4B71F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherInterfaceTableViewController.swift; sourceTree = "<group>"; };
+		EA4EC4B91F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherInterfaceTableViewCell.swift; sourceTree = "<group>"; };
+		EA545A4B1F4C555C0045D22E /* PollCreationInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PollCreationInterface.storyboard; sourceTree = "<group>"; };
+		EA545A4D1F4C55800045D22E /* StudentPollingInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentPollingInterface.storyboard; sourceTree = "<group>"; };
+		EA545A4F1F4C55A50045D22E /* ReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		EAB3B3DF1F39D99900F61136 /* Graderr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graderr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB3B3E21F39D99900F61136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAB3B3E71F39D99900F61136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAB3B3EA1F39D99900F61136 /* Graderr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Graderr.xcdatamodel; sourceTree = "<group>"; };
 		EAB3B3EC1F39D99900F61136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAB3B3EF1F39D99900F61136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,10 +172,11 @@
 			isa = PBXGroup;
 			children = (
 				EAB3B3EE1F39D99900F61136 /* LaunchScreen.storyboard */,
-				EAB3B3E61F39D99900F61136 /* Main.storyboard */,
 				EA1306B91F3B2973002F30A6 /* Login.storyboard */,
-				EA1306BB1F3B2983002F30A6 /* StudentInterface.storyboard */,
-				EA1306BD1F3B2992002F30A6 /* TeacherInterface.storyboard */,
+				EA545A4B1F4C555C0045D22E /* PollCreationInterface.storyboard */,
+				EA545A4D1F4C55800045D22E /* StudentPollingInterface.storyboard */,
+				EA1306BB1F3B2983002F30A6 /* TeacherInterface.storyboard */,
+				EA1306BD1F3B2992002F30A6 /* StudentInterface.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -171,6 +184,8 @@
 		EA08A3071F39DC4C007F8E12 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA4EC4BB1F4C4F3B008F43A1 /* TeacherInterface */,
+				EA4EC4B61F4C4D0A008F43A1 /* StudentInterface */,
 				EA1306C11F3B29DF002F30A6 /* Login */,
 			);
 			name = Controllers;
@@ -215,11 +230,37 @@
 			isa = PBXGroup;
 			children = (
 				EAEFF5251F41CE8C00D31920 /* TeacherService.swift */,
+				EA545A4F1F4C55A50045D22E /* ReviewService.swift */,
 				EAE587F61F4474C3008FF544 /* SchoolService.swift */,
 				EAE587F41F44726B008FF544 /* CourseService.swift */,
 				EAEFF5271F41CE9300D31920 /* StudentService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		EA4EC4B31F4C4C5A008F43A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA4EC4B11F4C4C4E008F43A1 /* StudentTableViewCell.swift */,
+				EA4EC4B91F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EA4EC4B61F4C4D0A008F43A1 /* StudentInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EA4EC4B41F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift */,
+			);
+			name = StudentInterface;
+			sourceTree = "<group>";
+		};
+		EA4EC4BB1F4C4F3B008F43A1 /* TeacherInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EA4EC4B71F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift */,
+			);
+			name = TeacherInterface;
 			sourceTree = "<group>";
 		};
 		EAB3B3D61F39D99900F61136 = {
@@ -247,6 +288,7 @@
 		EAB3B3E11F39D99900F61136 /* Graderr */ = {
 			isa = PBXGroup;
 			children = (
+				EA4EC4B31F4C4C5A008F43A1 /* Views */,
 				EA08A30B1F39DCFF007F8E12 /* Models */,
 				EA08A3071F39DC4C007F8E12 /* Controllers */,
 				EA08A3061F39DC44007F8E12 /* Storyboards */,
@@ -394,13 +436,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA545A4C1F4C555C0045D22E /* PollCreationInterface.storyboard in Resources */,
 				EA1306BA1F3B2973002F30A6 /* Login.storyboard in Resources */,
 				EAB3B3F01F39D99900F61136 /* LaunchScreen.storyboard in Resources */,
 				EAB3B3ED1F39D99900F61136 /* Assets.xcassets in Resources */,
-				EA1306BE1F3B2992002F30A6 /* TeacherInterface.storyboard in Resources */,
-				EA1306BC1F3B2983002F30A6 /* StudentInterface.storyboard in Resources */,
+				EA1306BE1F3B2992002F30A6 /* StudentInterface.storyboard in Resources */,
+				EA1306BC1F3B2983002F30A6 /* TeacherInterface.storyboard in Resources */,
+				EA545A4E1F4C55800045D22E /* StudentPollingInterface.storyboard in Resources */,
 				EA1306C51F3C839F002F30A6 /* GoogleService-Info.plist in Resources */,
-				EAB3B3E81F39D99900F61136 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA1306C01F3B29D6002F30A6 /* LoginViewController.swift in Sources */,
+				EA545A501F4C55A50045D22E /* ReviewService.swift in Sources */,
 				EAE587E51F43172F008FF544 /* StudentRegistrationViewController.swift in Sources */,
 				EAE587F51F44726B008FF544 /* CourseService.swift in Sources */,
 				EA1306C91F3C8446002F30A6 /* Constants.swift in Sources */,
@@ -610,11 +654,15 @@
 				EA08A30A1F39DCF3007F8E12 /* Course.swift in Sources */,
 				EAEFF5281F41CE9300D31920 /* StudentService.swift in Sources */,
 				EAE587F71F4474C3008FF544 /* SchoolService.swift in Sources */,
+				EA4EC4B51F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift in Sources */,
 				EA08A3131F39E3A3007F8E12 /* Field.swift in Sources */,
 				EA08A3111F39E09B007F8E12 /* Review.swift in Sources */,
 				EAE587E31F4316FD008FF544 /* TeacherRegistrationViewController.swift in Sources */,
 				EAB3B3EB1F39D99900F61136 /* Graderr.xcdatamodeld in Sources */,
+				EA4EC4BA1F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift in Sources */,
+				EA4EC4B21F4C4C4E008F43A1 /* StudentTableViewCell.swift in Sources */,
 				EA08A30D1F39DEE1007F8E12 /* Student.swift in Sources */,
+				EA4EC4B81F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift in Sources */,
 				EAB3B3E31F39D99900F61136 /* AppDelegate.swift in Sources */,
 				EAE587F91F4475A0008FF544 /* School.swift in Sources */,
 			);
@@ -654,14 +702,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EAB3B3E61F39D99900F61136 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAB3B3E71F39D99900F61136 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EAB3B3EE1F39D99900F61136 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     
     var selectedController : Int = -1
     // MARK: - Properties
-
+    
     @IBOutlet weak var studentLoginButton: UIButton!
     
     @IBOutlet weak var teacherLoginButton: UIButton!
@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         studentLoginButton.layer.cornerRadius = 6
         teacherLoginButton.layer.cornerRadius = 6
-
+        
         super.viewDidLoad()
     }
     
@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 extension LoginViewController: FUIAuthDelegate {
@@ -78,13 +78,49 @@ extension LoginViewController: FUIAuthDelegate {
         StudentService.show(forUID: user.uid) { (user) in
             if let user = user {
                 // handle existing user
-                Student.setCurrent(user, writeToUserDefaults: true)
+                Student.setCurrent(user, writeToUserDefaults: false)
                 
                 let initialViewController = UIStoryboard(name: "StudentInterface", bundle: .main).instantiateInitialViewController()
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
             } else {
                 // handle new user
+                
+                
+                
+                
+//                SchoolService.createSchool(schoolName: "DPHS", adminUID: "Not Set Yet", completion: {school in
+//                    print(school)
+//                    let schoolID = school!.schoolID
+//                    
+//                    TeacherService.createTeacher(Auth.auth().currentUser!, fullname: "Matt Moran", schoolID: schoolID, completion: { (teacher) in
+//                        
+//                        StudentService.createStudent(Auth.auth().currentUser!, name: "Sean Strong", schoolID: schoolID, completion: {(student) in
+//                            
+//                            CourseService.createCourse(teacherID: teacher!.teacherID, courseTitle: "AP World History", schoolID: schoolID, completion: { (course) in
+//                                
+//                                CourseService.registerForCourse(student: student!, course: course!, success: {(success) in
+//                                    print(success! ? "Success!" : "Failure :(")
+//                                    
+//                                })
+//                                
+//                            })
+//                            
+//                        })
+//
+//                    })
+//                    
+//
+//
+//
+//                })
+                
+                
+
+                
+
+                
+                
                 self.performSegue(withIdentifier: Constants.Segue.toStudentLoginInterface, sender: self)
             }
             }
@@ -92,7 +128,7 @@ extension LoginViewController: FUIAuthDelegate {
         TeacherService.show(forUID: user.uid) { (user) in
             if let user = user {
                 // handle existing user
-                Teacher.setCurrent(user, writeToUserDefaults: true)
+                Teacher.setCurrent(user, writeToUserDefaults: false)
                 
                 let initialViewController = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateInitialViewController()
                 self.view.window?.rootViewController = initialViewController
@@ -101,10 +137,10 @@ extension LoginViewController: FUIAuthDelegate {
                 // handle new user
                 self.performSegue(withIdentifier: Constants.Segue.toTeacherLoginInterface, sender: self)
             }
-        }
+            }
         default: print("Error; selected index not set yet.")
         }
         
-
+        
     }
 }

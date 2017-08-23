@@ -122,7 +122,7 @@ extension AppDelegate {
             
             print("Succesful teacher login")
             Teacher.setCurrent(teacher)
-            initialViewController = UIStoryboard(name: "StudentInterface", bundle: .main).instantiateInitialViewController()!
+            initialViewController = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateInitialViewController()!
             
         } else if Auth.auth().currentUser != nil, // student case
             let studentData = defaults.object(forKey: Constants.UserDefaults.currentStudent) as? Data,
@@ -131,11 +131,10 @@ extension AppDelegate {
             print("Succesful student login")
             Student.setCurrent(student)
             
-            initialViewController = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateInitialViewController()!
+            initialViewController = UIStoryboard(name: "StudentInterface", bundle: .main).instantiateInitialViewController()!
         } else {
             initialViewController = UIStoryboard(name: "Login", bundle: .main).instantiateInitialViewController()!
         }
-        
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }

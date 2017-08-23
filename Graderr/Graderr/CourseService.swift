@@ -15,14 +15,18 @@ struct CourseService {
     static func createCourse(teacherID : String, courseTitle : String, schoolID : String, completion: @escaping (Course?) -> Void) {
         let userAttrs = ["schoolID": schoolID, "title" : courseTitle, "teacherID" : teacherID]
         
-        let ref = Database.database().reference().child("courses").childByAutoId()
-        ref.setValue(userAttrs) { (error, ref) in
+        let courseID = Database.database().reference().childByAutoId().key
+        
+        let courseCreationData : [String : Any] = ["courses/\(schoolID)/\(courseID)" : userAttrs, "schools/\(schoolID)/courses/\(courseID)": courseTitle, "teachers/\(teacherID)/courses/\(courseID)" : courseTitle]
+        
+        let ref = Database.database().reference()
+        ref.updateChildValues(courseCreationData) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return completion(nil)
             }
             
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            ref.child("courses").child(schoolID).child(courseID).observeSingleEvent(of: .value, with: { (snapshot) in
                 let course = Course(snapshot: snapshot)
                 completion(course)
             })
@@ -78,15 +82,6 @@ struct CourseService {
             completion(course)
         })
     }
-    
-    static func showTeacherCourses(teacherID : String, completion: @escaping ([Course]?) -> Void) {
-        
-        
-        
-        
-    }
-    
-
     
     static func showAllCourses(forSchoolID schoolID: String, completion: @escaping ([Course]?) -> Void) {
         let ref = Database.database().reference().child("courses").child(schoolID)

@@ -7,49 +7,91 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class TeacherRegistrationViewController: UIViewController {
     
     
-    //MARK: - IBOutlets
+    //MARK: - Properties
+    var selectedSchool : School?  {
+        didSet {
+            //change background color of the uibutton from outlined green to total green :) 
+            //signUpButton.backgroundColor = UIColor
+        }
+    }
     
+    var schools = [School]() {
+        didSet {
+            schoolNameTableView.reloadData()
+        }
+    }
+    
+    
+    var coursesTaught = [Course]() {
+        didSet {
+            classTableView.reloadData()
+        }
+    }
+    
+    //MARK: - IBOutlet
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var schoolNameTableView: UITableView!
     @IBOutlet weak var classTableView: UITableView!
     @IBOutlet weak var addClassTextField: UITextField!
     
+    //MARK: - Views
+    
+    @IBOutlet weak var classesTaughtStackView: UIStackView!
     //MARK: - IBActions
     
-    @IBAction func addSchool(_ sender: Any) {
-        //CourseService.addSchool(name:String)
-        
-    }
-    
     @IBAction func addClass(_ sender: Any) {
-        //CourseService.addClass(orgUID: String, teacherUID: String) { (class) in
-        //   append to array
-        //}
+        CourseService.createCourse(teacherID: Teacher.current.teacherID, courseTitle: addClassTextField.text!, schoolID: selectedSchool!.schoolID, completion: {(course) in
+            if let course = course {
+                self.coursesTaught.append(course)
+            } else {
+                print("Error: Unable to create course succesfully.")
+            }
+  
+        })
     }
     
     @IBAction func signUp(_ sender: Any) {
-        //TeacherService.create(orgUID:String, teacherUID :String, 
+        
+        TeacherService.createTeacher(Auth.auth().currentUser!, fullname: nameTextField.text!, schoolID: selectedSchool!.schoolID) { (teacher) in
+            guard let teacher = teacher else {
+                return
+            }
+            Teacher.setCurrent(teacher, writeToUserDefaults: false)
+            self.classesTaughtStackView.isHidden = false
+        }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //tableview setup
+        classTableView.delegate = self
+        classTableView.dataSource = self
+        schoolNameTableView.delegate = self
+        schoolNameTableView.dataSource = self
+        //view code
+        
+        
+        //        classesTaughtStackView.isHidden = true
+        //        signUpButton.isHidden = true
+
+        signUpButton.layer.cornerRadius = 6
+        
+        SchoolService.showAllSchools(completion: { (schools) in
+            if let schools = schools {
+                self.schools = schools
+            } else {
+                print("Unable to succesfully obtain schools")
+            }
+        })
 
         // Do any additional setup after loading the view.
     }
@@ -74,12 +116,23 @@ class TeacherRegistrationViewController: UIViewController {
 
 extension TeacherRegistrationViewController : UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch tableView.tag {
+        case 0: //school table view case
+            selectedSchool = schools[indexPath.row]
+        case 1: //courses table view case
+            print("Selected table view cell in the courses taught tableview.")
+        default:
+            print("Tag for tableview out of bounds")
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView.tag {
         case 0: //school search case
-            return 0
+            return schools.count
         case 1: //classes added case
-            return 0
+            return coursesTaught.count
         default:
             fatalError("Table view identifier error")
         }
@@ -87,17 +140,17 @@ extension TeacherRegistrationViewController : UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = UITableViewCell()
         switch tableView.tag {
         case 0: //school search case
-            return UITableViewCell()
+            cell.textLabel?.text = schools[indexPath.row].schoolName
         case 1: //classes added case
-            return UITableViewCell()
+            cell.textLabel?.text = coursesTaught[indexPath.row].title
         default:
             fatalError("Table view identifier error")
         }
-
+        return cell
     }
-    
 }
 
 

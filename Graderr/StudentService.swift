@@ -13,8 +13,8 @@ import FirebaseDatabase
 
 struct StudentService {
         
-    static func createStudent(_ firUser: FIRUser, username: String, completion: @escaping (Student?) -> Void) {
-        let userAttrs = ["username": username]
+    static func createStudent(_ firUser: FIRUser, name: String, schoolID: String, completion: @escaping (Student?) -> Void) {
+        let userAttrs = ["name": name, "schoolID" : schoolID]
         
         let ref = Database.database().reference().child("students").child(firUser.uid)
         ref.setValue(userAttrs) { (error, ref) in
@@ -28,9 +28,8 @@ struct StudentService {
                 completion(student)
             })
         }
-        
-        
     }
+
     
     static func show(forUID uid: String, completion: @escaping (Student?) -> Void) {
         let ref = Database.database().reference().child("students").child(uid)
@@ -53,16 +52,26 @@ struct StudentService {
                 return completion(nil)
             }
             var courseList = [Course]()
+            let dispatchGroup = DispatchGroup()
+            
             for courseID in Array(dict.keys) {
+                
+                dispatchGroup.enter()
                 CourseService.show(forCourseID: courseID, schoolID: student.schoolID, completion: {(course) in
+                    
                     if let course = course {
+                        
                         courseList.append(course)
                     }
+                    dispatchGroup.leave()
                     
                     
                 })
             }
-            completion(courseList)
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(courseList)
+            })
             
             
             

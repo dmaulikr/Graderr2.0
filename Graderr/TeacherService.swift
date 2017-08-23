@@ -14,8 +14,8 @@ import FirebaseDatabase
 struct TeacherService {
     
     
-    static func createTeacher(_ firUser: FIRUser, fullname : String, completion: @escaping (Teacher?) -> Void) {
-        let userAttrs = ["fullname": fullname]
+    static func createTeacher(_ firUser: FIRUser, fullname : String, schoolID : String, completion: @escaping (Teacher?) -> Void) {
+        let userAttrs = ["name": fullname, "schoolID" : schoolID]
         
         let ref = Database.database().reference().child("teachers").child(firUser.uid)
         ref.setValue(userAttrs) { (error, ref) in
@@ -52,17 +52,24 @@ struct TeacherService {
                 print("Unable to obtain snapshot values for courses.")
                 return completion(nil)
             }
+            let dispatchGroup = DispatchGroup()
+            
             var courseList = [Course]()
             for courseID in Array(dict.keys) {
+                dispatchGroup.enter()
                 CourseService.show(forCourseID: courseID, schoolID: teacher.schoolID, completion: {(course) in
                     if let course = course {
                         courseList.append(course)
                     }
+                    dispatchGroup.leave()
                     
                     
                 })
             }
-            completion(courseList)
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(courseList)
+            })
+            
             
             
             
