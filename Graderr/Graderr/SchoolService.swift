@@ -41,47 +41,18 @@ struct SchoolService {
         })
     }
     
+    static func showCourseIDs(forSchoolID schoolID: String, completion: @escaping ([String]?) -> Void) {
+        let ref = Database.database().reference().child("schools").child("courses")
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let courseDict = snapshot.value as? [String : String] else {
+                print("Error obtaining courseIDs for given school")
+                return completion(nil)
+            }
+            completion(Array(courseDict.keys))
+        })
+    }
     
     
-//    static func registerStudentForSchool(student: Student, school : School, success: @escaping (Bool?) -> Void ) {
-//        let ref = Database.database().reference()
-//        
-//        let registrationData =
-//            ["students/\(student.studentID)/schoolID/\(school.schoolID)" : school.schoolName]
-//        
-//        ref.updateChildValues(registrationData) { (error, ref) in
-//            if let error = error {
-//                assertionFailure(error.localizedDescription)
-//                success(false)
-//            }
-//            
-//            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//                print("Was succesful upload to server!")
-//                success(true)
-//            })
-//        }
-//    }
-    
-//    static func registerTeacherForSchool(teacher: Teacher, school : School, success: @escaping (Bool?) -> Void ) {
-//        let ref = Database.database().reference()
-//        
-//        let registrationData =
-//            ["teachers/\(teacher.teacherID)/schoolID/\(school.schoolID)" : school.schoolName]
-//        
-//        ref.updateChildValues(registrationData) { (error, ref) in
-//            if let error = error {
-//                assertionFailure(error.localizedDescription)
-//                success(false)
-//            }
-//            
-//            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//                print("Was succesful upload to server!")
-//                success(true)
-//            })
-//        }
-//    }
-    
-
     
     static func showAllSchools(completion: @escaping ([School]?) -> Void) {
         let ref = Database.database().reference().child("schools")

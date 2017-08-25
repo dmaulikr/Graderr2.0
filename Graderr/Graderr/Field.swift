@@ -18,18 +18,18 @@ class Field {
 }
 
 class BoolField : Field {
-    let value : Bool
+    let value : Bool?
     
-    init (title: String, value : Bool) {
+    init (title: String, value : Bool? = nil) {
         self.value = value
         super.init(title: title)
     }
 }
 
-class RatingField : Field {
-    let value : Int
+class NumericField : Field {
+    let value : Int?
     
-    init (title: String, value: Int) {
+    init (title: String, value: Int? = nil) {
         self.value = value
         super.init(title: title)
         
@@ -38,9 +38,9 @@ class RatingField : Field {
 }
 
 class WrittenField : Field {
-    let value : String
+    let value : String?
     
-    init (title: String, value: String) {
+    init (title: String, value: String? = nil) {
         self.value = value
         super.init(title: title)
         

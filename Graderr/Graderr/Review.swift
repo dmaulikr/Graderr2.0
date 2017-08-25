@@ -10,17 +10,17 @@ import Foundation
 
 class Review {
     
-    let student : Student
-    let course : Course
+    let studentID : String
+    let courseID : String
     let fields : [Field]
-    let date : Date
     
-    init (student: Student, course : Course, date : Date, fields: [Field]) {
-        self.student = student
-        self.course = course
-        self.date = date
+    init (studentID : String, courseID: String, fields: [Field]) {
+        self.studentID = studentID
+        self.courseID = courseID
         self.fields = fields
     }
+    
+    
     
     
     

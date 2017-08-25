@@ -39,4 +39,10 @@ struct Constants {
         static let name = "name"
         static let courseIDs = "courseIDs"
     }
+    
+    struct QuestionTypes {
+        static let bool = "bool"
+        static let written = "written"
+        static let numeric = "numeric"
+    }
 }
