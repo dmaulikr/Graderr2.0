@@ -61,14 +61,23 @@ class StudentRegistrationViewController: UIViewController {
                 return
             }
             Student.setCurrent(student, writeToUserDefaults: false)
+            let dispatchGroup = DispatchGroup()
             
             
             for course in self.selectedCourses {
+                dispatchGroup.enter()
                 CourseService.registerForCourse(student: student, course: course, success: {(success) in
                     print(success! ? "Succesfully added course named \(course.title)" : "Unable to register student for course")
+                    dispatchGroup.leave()
                     
                 })
             }
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                let initialViewController = UIStoryboard(name: "StudentInterface", bundle: .main).instantiateInitialViewController()!
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            })
             
             
             
@@ -102,6 +111,7 @@ class StudentRegistrationViewController: UIViewController {
         
         
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -147,9 +157,11 @@ extension StudentRegistrationViewController : UITableViewDelegate, UITableViewDa
         case 1: //courses table view case
             if selectedCourses.contains(where: {$0.courseID == courses[indexPath.row].courseID}) {
                 selectedCourses.remove(at: selectedCourses.index(where: {$0.courseID == courses[indexPath.row].courseID})!)
+                //self.tableView(tableView, cellForRowAt: indexPath).backgroundColor = UIColor.gray
                 print("Removed \(courses[indexPath.row]) from selectedCourses.")
             } else {
                 selectedCourses.append(courses[indexPath.row])
+                //self.tableView(tableView, cellForRowAt: indexPath).backgroundColor = UIColor.green
                 print("Added \(courses[indexPath.row]) to selectedCourses.")
             }
 

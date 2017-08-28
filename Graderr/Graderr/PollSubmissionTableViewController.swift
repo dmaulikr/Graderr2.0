@@ -1,29 +1,17 @@
 //
-//  TeacherInterfaceTableViewController.swift
+//  PollSubmissionTableViewController.swift
 //  Graderr
 //
-//  Created by Sean Strong on 8/22/17.
+//  Created by Sean Strong on 8/28/17.
 //  Copyright © 2017 Sean Strong. All rights reserved.
 //
 
 import UIKit
 
-class TeacherInterfaceTableViewController: UITableViewController {
+class PollSubmissionTableViewController: UITableViewController {
 
-    var coursesTaught = [Course]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: {(courses) in
-        self.coursesTaught = courses ?? []
-            QuestionService.setDefaultCourseQuestions(forCourse: self.coursesTaught[0], questionDict: ["Was class exciting today?":"bool"], success: { (success) in print(success)})
-        
-        })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,35 +29,23 @@ class TeacherInterfaceTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return coursesTaught.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentCourse = coursesTaught[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "teacherInterfaceCell", for: indexPath) as! TeacherInterfaceTableViewCell
-        cell.classNameLabel.text = currentCourse.title
-        
-        
-        ReviewService.showReviewIDs(forCourseID: currentCourse.courseID, forSchoolID: currentCourse.schoolID, completion: {(reviewIDs) in
-            guard let reviewIDs = reviewIDs else  {
-                    print("Error when trying to obtain current number of course reviews for today when populating the cells")
-                return
-            }
-            cell.studentsCompletedPollLabel.text = String(reviewIDs.count)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        })
-        
-        cell.totalStudentsLabel.text = String(coursesTaught[indexPath.row].studentIDs.count)
+        // Configure the cell...
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

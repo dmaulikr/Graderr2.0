@@ -33,6 +33,7 @@ class TeacherRegistrationViewController: UIViewController {
     }
     
     //MARK: - IBOutlet
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -63,9 +64,18 @@ class TeacherRegistrationViewController: UIViewController {
                 return
             }
             Teacher.setCurrent(teacher, writeToUserDefaults: false)
-            self.classesTaughtStackView.isHidden = false
         }
     }
+    
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        let initialViewController = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateInitialViewController()!
+        self.view.window?.rootViewController = initialViewController
+        self.view.window?.makeKeyAndVisible()
+        
+    }
+   
+
+    
     
 
     
@@ -84,6 +94,7 @@ class TeacherRegistrationViewController: UIViewController {
         //        signUpButton.isHidden = true
 
         signUpButton.layer.cornerRadius = 6
+        doneButton.layer.cornerRadius = 6
         
         SchoolService.showAllSchools(completion: { (schools) in
             if let schools = schools {
