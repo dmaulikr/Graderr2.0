@@ -35,7 +35,7 @@ struct CourseService {
     
     static func registerForCourse(student: Student, course : Course, success: @escaping (Bool?) -> Void ) {
         let ref = Database.database().reference()
-
+        
         let registrationData =
             ["courses/\(course.schoolID)/\(course.courseID)/students/\(student.studentID)" : student.name,
              "students/\(student.studentID)/courses/\(course.courseID)" : course.title]
@@ -53,6 +53,7 @@ struct CourseService {
         }
     }
     
+
     
     static func removeFromCourse(studentID : String, courseID : String, schoolID : String) {
         

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 struct Utility {
     
@@ -16,6 +17,9 @@ struct Utility {
         
     }
     
+    static func newFirebaseKey() -> String {
+        return Database.database().reference().childByAutoId().key
+    }
     
     
 }

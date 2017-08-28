@@ -44,37 +44,48 @@ struct TeacherService {
         })
     }
     
-    static func showCoursesTeaching(teacher: Teacher, completion: @escaping ([Course]?) -> Void) {
-        let ref = Database.database().reference().child("teachers").child(teacher.teacherID).child("courses")
+    static func showCourseIDs(forTeacherID teacherID : String, completion : @escaping ([String]?) -> Void ) {
+        
+        let ref = Database.database().reference().child("teachers").child(teacherID).child("courses")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             
             guard let dict = snapshot.value as? [String : String] else {
                 print("Unable to obtain snapshot values for courses.")
                 return completion(nil)
             }
-            let dispatchGroup = DispatchGroup()
             
+            completion(Array(dict.keys))
+        })
+    }
+    
+    static func showCoursesTeaching(forTeacher teacher: Teacher, completion: @escaping ([Course]?) -> Void) {
+        
+        TeacherService.showCourseIDs(forTeacherID: teacher.teacherID, completion: {(courseIDs) in
+            guard let courseIDs = courseIDs else {
+                print("showCourseIDs returned nil in the completion")
+                return completion(nil)
+            }
+            
+            let dispatchGroup = DispatchGroup()
             var courseList = [Course]()
-            for courseID in Array(dict.keys) {
+            
+            for courseID in courseIDs {
                 dispatchGroup.enter()
                 CourseService.show(forCourseID: courseID, schoolID: teacher.schoolID, completion: {(course) in
                     if let course = course {
                         courseList.append(course)
                     }
                     dispatchGroup.leave()
-                    
-                    
                 })
             }
+            
             dispatchGroup.notify(queue: .main, execute: {
                 completion(courseList)
             })
-            
-            
-            
-            
+   
         })
     }
+    
     
 }
 

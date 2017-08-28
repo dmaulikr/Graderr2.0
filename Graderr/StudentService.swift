@@ -12,7 +12,7 @@ import FirebaseAuth.FIRUser
 import FirebaseDatabase
 
 struct StudentService {
-        
+    
     static func createStudent(_ firUser: FIRUser, name: String, schoolID: String, completion: @escaping (Student?) -> Void) {
         let userAttrs = ["name": name, "schoolID" : schoolID]
         
@@ -29,7 +29,7 @@ struct StudentService {
             })
         }
     }
-
+    
     
     static func show(forUID uid: String, completion: @escaping (Student?) -> Void) {
         let ref = Database.database().reference().child("students").child(uid)
@@ -43,37 +43,47 @@ struct StudentService {
     }
     
     
-    static func showEnrolledCourses(student: Student, completion: @escaping ([Course]?) -> Void) {
-        let ref = Database.database().reference().child("students").child(student.studentID).child("courses")
+    static func showCourseIDs(forStudentID studentID : String, completion : @escaping ([String]?) -> Void ) {
+        
+        let ref = Database.database().reference().child("student").child(studentID).child("courses")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             
             guard let dict = snapshot.value as? [String : String] else {
                 print("Unable to obtain snapshot values for courses.")
                 return completion(nil)
             }
-            var courseList = [Course]()
-            let dispatchGroup = DispatchGroup()
             
-            for courseID in Array(dict.keys) {
-                
+            completion(Array(dict.keys))
+        })
+    }
+    
+    
+    
+    static func showEnrolledCourses(student: Student, completion: @escaping ([Course]?) -> Void) {
+        StudentService.showCourseIDs(forStudentID: student.studentID, completion: {(courseIDs) in
+            
+            guard let courseIDs = courseIDs else {
+                print("showCourseIDs returned nil in the completion")
+                return completion(nil)
+            }
+            
+            let dispatchGroup = DispatchGroup()
+            var courseList = [Course]()
+            
+            for courseID in courseIDs {
                 dispatchGroup.enter()
                 CourseService.show(forCourseID: courseID, schoolID: student.schoolID, completion: {(course) in
-                    
                     if let course = course {
-                        
                         courseList.append(course)
                     }
                     dispatchGroup.leave()
-                    
-                    
                 })
             }
             
             dispatchGroup.notify(queue: .main, execute: {
                 completion(courseList)
             })
-            
-            
+
             
         })
         

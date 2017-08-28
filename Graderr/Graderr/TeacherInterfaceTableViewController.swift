@@ -19,7 +19,7 @@ class TeacherInterfaceTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TeacherService.showCoursesTeaching(teacher: Teacher.current, completion: {(courses) in
+        TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: {(courses) in
         self.coursesTaught = courses ?? []
         
         })
@@ -50,11 +50,21 @@ class TeacherInterfaceTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let currentCourse = coursesTaught[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "teacherInterfaceCell", for: indexPath) as! TeacherInterfaceTableViewCell
-        cell.classNameLabel.text = coursesTaught[indexPath.row].title
-        cell.totalStudentsLabel.text = String(coursesTaught[indexPath.row].studentIDs.count)
-
+        cell.classNameLabel.text = currentCourse.title
         
+        
+        ReviewService.showReviewIDs(forCourseID: currentCourse.courseID, forSchoolID: currentCourse.schoolID, completion: {(reviewIDs) in
+            guard let reviewIDs = reviewIDs else  {
+                    print("Error when trying to obtain current number of course reviews for today when populating the cells")
+                return
+            }
+            cell.studentsCompletedPollLabel.text = String(reviewIDs.count)
+
+        })
+        
+        cell.totalStudentsLabel.text = String(coursesTaught[indexPath.row].studentIDs.count)
 
         return cell
     }

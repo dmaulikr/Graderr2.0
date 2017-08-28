@@ -16,7 +16,7 @@ import FirebaseDatabase
 struct QuestionService {
     
     static func setCustomQuestions(forCourse course : Course, forDateString dateString: String = Utility.dateToString(), questionDict : [String: String], success: @escaping (Bool) -> Void) {
-        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("custom questions").child(dateString)
+        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("customQuestions").child(dateString)
         
         ref.setValue(questionDict) { (error,ref) in
             if let error = error {
@@ -30,7 +30,7 @@ struct QuestionService {
     }
     
     static func setDefaultCourseQuestions(forCourse course : Course, questionDict : [String: String], success: @escaping (Bool) -> Void) {
-        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("default questions")
+        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("defaultQuestions")
         
         ref.setValue(questionDict) { (error,ref) in
             if let error = error {
@@ -44,7 +44,7 @@ struct QuestionService {
     }
     
     static func setDefaultSchoolQuestions(forSchoolID schoolID : String, questionDict : [String: String], success: @escaping (Bool) -> Void) {
-        let ref = Database.database().reference().child("questions").child(schoolID).child("default questions")
+        let ref = Database.database().reference().child("questions").child(schoolID).child("defaultQuestions")
         
         ref.setValue(questionDict) { (error,ref) in
             if let error = error {
@@ -58,7 +58,7 @@ struct QuestionService {
     
     static func getDefaultSchoolQuestions(forSchoolID schoolID : String, completion: @escaping ([Field]?) -> Void) {
         
-        let ref = Database.database().reference().child("questions").child(schoolID).child("default questions")
+        let ref = Database.database().reference().child("questions").child(schoolID).child("defaultQuestions")
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             guard let questionDict = snapshot.value as? [String: String] else {
                 print("Unable to convert snapshot to questionDict for default school questions")
@@ -84,7 +84,7 @@ struct QuestionService {
     }
     
     static func getDefaultCourseQuestions(forCourse course: Course, completion: @escaping ([Field]?) -> Void) {
-        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("default questions")
+        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("defaultQuestions")
         
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             guard let questionDict = snapshot.value as? [String: String] else {
@@ -109,7 +109,7 @@ struct QuestionService {
     
     static func getCustomQuestions(forCourse course: Course, forDateString dateString: String = Utility.dateToString(), completion:  @escaping ([Field]?) -> Void) {
         
-        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("custom questions").child(dateString)
+        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("customQuestions").child(dateString)
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             guard let questionDict = snapshot.value as? [String: String] else {
                 print("Unable to convert snapshot to questionDict for custom course questions")
