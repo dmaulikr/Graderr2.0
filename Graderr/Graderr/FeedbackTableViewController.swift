@@ -1,27 +1,32 @@
 //
-//  TeacherInterfaceTableViewController.swift
+//  FeedbackTableViewController.swift
 //  Graderr
 //
-//  Created by Sean Strong on 8/22/17.
+//  Created by Sean Strong on 8/28/17.
 //  Copyright © 2017 Sean Strong. All rights reserved.
 //
 
 import UIKit
 
-class TeacherInterfaceTableViewController: UITableViewController {
-
-    var coursesTaught = [Course]() {
+class FeedbackTableViewController: UITableViewController {
+    
+    var reviews : [Review] = [Review]() {
         didSet {
             tableView.reloadData()
         }
     }
     
-    
+    var currentCourse : Course?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: {(courses) in
-        self.coursesTaught = courses ?? []
-            QuestionService.setDefaultCourseQuestions(forCourse: self.coursesTaught[0], questionDict: ["Was class exciting today?":"bool", "What is your favorite color?" : "written", "How lit is college?" : "numeric"], success: { (success) in print(success)})
+        
+        ReviewService.getReviews(forCourseID: currentCourse!.courseID, forSchoolID: currentCourse!.schoolID, completion: {(reviews) in
+            guard let reviews = reviews else {
+                print("Error fetching reviews from firebase")
+                return
+            }
+            self.reviews = reviews
         
         })
 
@@ -46,33 +51,27 @@ class TeacherInterfaceTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return coursesTaught.count
+        return reviews.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentCourse = coursesTaught[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "teacherInterfaceCell", for: indexPath) as! TeacherInterfaceTableViewCell
-        cell.classNameLabel.text = currentCourse.title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        
-        ReviewService.showReviewIDs(forCourseID: currentCourse.courseID, forSchoolID: currentCourse.schoolID, completion: {(reviewIDs) in
-            guard let reviewIDs = reviewIDs else  {
-                    print("Error when trying to obtain current number of course reviews for today when populating the cells")
-                return
-            }
-            cell.studentsCompletedPollLabel.text = String(reviewIDs.count)
-
+        let currentReview = reviews[indexPath.row]
+        StudentService.show(forUID: currentReview.studentID, completion: {(student) in
+            cell.textLabel?.text = student!.name
         })
-        
-        cell.totalStudentsLabel.text = String(coursesTaught[indexPath.row].studentIDs.count)
+
+        // Configure the cell...
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toFeedbackController", sender: self)
+        self.performSegue(withIdentifier: "toFeedbackItems", sender: self)
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -114,10 +113,10 @@ class TeacherInterfaceTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "toFeedbackController" {
-            let vc = segue.destination as! FeedbackTableViewController
-            vc.currentCourse = coursesTaught[tableView.indexPathsForSelectedRows![0].row]
+        if segue.identifier == "toFeedbackItems" {
+            let vc = segue.destination as! FeedbackItemTableViewController
+            vc.review = reviews[tableView.indexPathsForSelectedRows![0].row]
+            
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

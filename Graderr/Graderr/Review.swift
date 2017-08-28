@@ -69,7 +69,7 @@ class Review {
         }
         
         //written questions
-        if let writtenDict = dict["written"] as? [String:String] {
+        if let writtenDict = questionDict["written"] as? [String:String] {
             
             self.fields.append(contentsOf: writtenDict.map({WrittenField.init(title: $0.key, value: $0.value)}))
             
@@ -78,7 +78,7 @@ class Review {
         }
         
         //numeric questions
-        if let numericDict = dict["numeric"] as? [String:Int] {
+        if let numericDict = questionDict["numeric"] as? [String:Int] {
             
             self.fields.append(contentsOf: numericDict.map({NumericField.init(title: $0.key, value: $0.value)}))
             

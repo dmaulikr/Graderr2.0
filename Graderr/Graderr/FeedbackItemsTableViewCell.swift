@@ -1,24 +1,18 @@
 //
-//  TeacherInterfaceTableViewCell.swift
+//  FeedbackItemsTableViewCell.swift
 //  Graderr
 //
-//  Created by Sean Strong on 8/22/17.
+//  Created by Sean Strong on 8/28/17.
 //  Copyright © 2017 Sean Strong. All rights reserved.
 //
 
 import UIKit
 
-class TeacherInterfaceTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var classNameLabel: UILabel!
-    
-    @IBOutlet weak var studentsCompletedPollLabel: UILabel!
-    
-    @IBOutlet weak var totalStudentsLabel: UILabel!
-    
-    
-    
+class FeedbackItemsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var responseLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

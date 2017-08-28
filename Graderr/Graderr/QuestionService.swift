@@ -139,32 +139,38 @@ struct QuestionService {
         
         dispatchGroup.enter()
         QuestionService.getDefaultSchoolQuestions(forSchoolID: course.schoolID, completion: {(fields) in
-            guard let fields = fields else {
-                return completion(nil)
+            if let fields = fields {
+                print("Default school questions obtained successfully")
+                todaysQuestions.append(contentsOf: fields)
+            } else {
+                print("No default school questions specified")
             }
-            print("1. Default school questions obtained successfully")
-            todaysQuestions.append(contentsOf: fields)
+
             dispatchGroup.leave()
             
         })
         
         dispatchGroup.enter()
         QuestionService.getDefaultCourseQuestions(forCourse: course, completion: {(fields) in
-            guard let fields = fields else {
-                return completion(nil)
+            if let fields = fields {
+                print("Default course questions obtained successfully")
+                todaysQuestions.append(contentsOf: fields)
+            } else {
+                print("No default course questions specified")
             }
-            print("2. Default course questions obtained succesfully")
-            todaysQuestions.append(contentsOf: fields)
+            
             dispatchGroup.leave()
         })
         
         dispatchGroup.enter()
         QuestionService.getCustomQuestions(forCourse: course, forDateString: dateString, completion: {(fields) in
-            guard let fields = fields else {
-                return completion(nil)
+            if let fields = fields {
+                print("Custom course questions obtained successfully")
+                todaysQuestions.append(contentsOf: fields)
+            } else {
+                print("No custom course questions specified")
             }
-            print("3. Custom course questions obtained succesfully")
-            todaysQuestions.append(contentsOf: fields)
+            
             dispatchGroup.leave()
         })
         

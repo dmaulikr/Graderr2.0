@@ -64,6 +64,10 @@ class StudentInterfaceTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toPoll", sender: self)
+    }
  
 
     /*
@@ -101,14 +105,21 @@ class StudentInterfaceTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toPoll" {
+            let vc = segue.destination as! PollSubmissionTableViewController
+            vc.currentCourse = registeredCourses[tableView.indexPathsForSelectedRows![0].row]
+            
+            
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

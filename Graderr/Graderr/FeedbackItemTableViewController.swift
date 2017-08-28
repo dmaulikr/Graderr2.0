@@ -1,29 +1,25 @@
+
 //
-//  TeacherInterfaceTableViewController.swift
+//  FeedbackItemTableViewController.swift
 //  Graderr
 //
-//  Created by Sean Strong on 8/22/17.
+//  Created by Sean Strong on 8/28/17.
 //  Copyright © 2017 Sean Strong. All rights reserved.
 //
 
 import UIKit
 
-class TeacherInterfaceTableViewController: UITableViewController {
-
-    var coursesTaught = [Course]() {
+class FeedbackItemTableViewController: UITableViewController {
+    
+    var review : Review? {
         didSet {
             tableView.reloadData()
         }
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: {(courses) in
-        self.coursesTaught = courses ?? []
-            QuestionService.setDefaultCourseQuestions(forCourse: self.coursesTaught[0], questionDict: ["Was class exciting today?":"bool", "What is your favorite color?" : "written", "How lit is college?" : "numeric"], success: { (success) in print(success)})
         
-        })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -46,33 +42,21 @@ class TeacherInterfaceTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return coursesTaught.count
+        return review?.fields.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentCourse = coursesTaught[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "teacherInterfaceCell", for: indexPath) as! TeacherInterfaceTableViewCell
-        cell.classNameLabel.text = currentCourse.title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "feedback", for: indexPath) as! FeedbackItemsTableViewCell
         
-        
-        ReviewService.showReviewIDs(forCourseID: currentCourse.courseID, forSchoolID: currentCourse.schoolID, completion: {(reviewIDs) in
-            guard let reviewIDs = reviewIDs else  {
-                    print("Error when trying to obtain current number of course reviews for today when populating the cells")
-                return
-            }
-            cell.studentsCompletedPollLabel.text = String(reviewIDs.count)
+        let currentField = review!.fields[indexPath.row]
 
-        })
-        
-        cell.totalStudentsLabel.text = String(coursesTaught[indexPath.row].studentIDs.count)
+        cell.questionLabel.text = currentField.title
+        cell.responseLabel.text = String(describing: currentField.value!)
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toFeedbackController", sender: self)
-    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -109,19 +93,14 @@ class TeacherInterfaceTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "toFeedbackController" {
-            let vc = segue.destination as! FeedbackTableViewController
-            vc.currentCourse = coursesTaught[tableView.indexPathsForSelectedRows![0].row]
-        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }

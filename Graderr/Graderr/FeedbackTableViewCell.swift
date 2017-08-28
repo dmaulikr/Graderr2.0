@@ -1,5 +1,5 @@
 //
-//  PollSubmissionTableViewCell.swift
+//  FeedbackTableViewCell.swift
 //  Graderr
 //
 //  Created by Sean Strong on 8/28/17.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class PollSubmissionTableViewCell: UITableViewCell {
+class FeedbackTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var questionTypeLabel: UILabel!
+    @IBOutlet weak var questionNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

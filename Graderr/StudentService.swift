@@ -45,7 +45,7 @@ struct StudentService {
     
     static func showCourseIDs(forStudentID studentID : String, completion : @escaping ([String]?) -> Void ) {
         
-        let ref = Database.database().reference().child("student").child(studentID).child("courses")
+        let ref = Database.database().reference().child("students").child(studentID).child("courses")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             
             guard let dict = snapshot.value as? [String : String] else {
