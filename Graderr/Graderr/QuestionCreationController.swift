@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DefaultQuestionsViewController: UIViewController {
+class QuestionCreationViewController: UIViewController {
     
     //MARK: - Properties
     var questionsCreated = [(String,String)]() {
@@ -18,9 +18,11 @@ class DefaultQuestionsViewController: UIViewController {
     }
     
     var selectedQuestionType : String? //should eventually be an enum
+    var isDefaultQuestionController : Bool = true
     
     
     // MARK: -IBOutlets
+    @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var questionContentTextField: UITextField!
     @IBOutlet weak var questionsTableView: UITableView!
     @IBOutlet weak var yesNoImageView: UIImageView!
@@ -36,7 +38,9 @@ class DefaultQuestionsViewController: UIViewController {
         } else if selectedQuestionType == nil {
             Utility.createAlert(title: "Error", message: "Please select an appropriate question type", sender: self)
         } else {
-            nextButtonImageView.image = UIImage(named:"NextButton")
+            if isDefaultQuestionController {
+                nextButtonImageView.image = UIImage(named:"NextButton")
+            }
             questionsCreated.append((question :questionContentTextField.text!, type: selectedQuestionType!))
             questionContentTextField.text = ""
         }
@@ -68,35 +72,49 @@ class DefaultQuestionsViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        if questionsCreated.count == 0 {
+        if questionsCreated.count == 0 && isDefaultQuestionController {
             Utility.createAlert(title: "Error", message: "Please create at least one default question for your class", sender: self)
-        } else {
+            
+        } else if isDefaultQuestionController {
             
             Utility.startLoading(view: self.view)
-            TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: { (courses) in
-                guard let courses = courses else {
-                    fatalError("This teacher does not have any courses that they are teaching")
+            QuestionService.setAllDefaultQuestions(forTeacher: Teacher.current, questionDict: Utility.arrayOfTuplesIntoDictionary(array: self.questionsCreated), success: {(success) in
+                
+                Utility.endLoading()
+                if success {
+                    let nextVC = UIStoryboard(name: "Login", bundle: .main).instantiateViewController(withIdentifier: "questionCreationController") as! QuestionCreationViewController
+                    nextVC.isDefaultQuestionController = false
+                    self.present(nextVC, animated: true, completion: nil)
+                } else {
+                    Utility.createAlert(title: "Error", message: "Unable to submit reviews succesfully. Please try again later.", sender: self)
                 }
-                let dispatchGroup = DispatchGroup()
-                
-                for course in courses {
-                    dispatchGroup.enter()
-                    QuestionService.setDefaultCourseQuestions(forCourse: course, questionDict: Utility.arrayOfTuplesIntoDictionary(array: self.questionsCreated), success: {(success) in
-                        print(success ? "Able to succesfully upload default course questions for \(course.title)" : "Error uploading default course questions for \(course.title)")
-                        dispatchGroup.leave()
-                        
-                    })
-                }
-                
-                dispatchGroup.notify(queue: .main, execute: {
-
-                    Utility.endLoading()
-                    Utility.createAlert(title: "Success", message: "Eventually implement a segue here", sender: self)
-                })
-                
             })
             
+        } else {
+            Utility.startLoading(view: self.view)
+            QuestionService.setAllDefaultQuestions(forTeacher: Teacher.current, questionDict: Utility.arrayOfTuplesIntoDictionary(array: self.questionsCreated), success: {(success) in
+                Utility.endLoading()
+                
+                if success {
+                    if (self.presentingViewController as? QuestionCreationViewController) != nil { //default question creation case
+                        let homeVC = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateInitialViewController()
+                        self.view.window?.rootViewController = homeVC
+                        self.view.window?.makeKeyAndVisible()
+                    } else { //daily case
+                        self.dismiss(animated: true, completion: nil)
+                    }
+
+                    
+                } else {
+                    Utility.createAlert(title: "Error", message: "Unable to submit reviews succesfully. Please try again later.", sender: self)
+                }
             
+            
+            
+            
+            
+            })
+
         }
         
     }
@@ -106,6 +124,14 @@ class DefaultQuestionsViewController: UIViewController {
         super.viewDidLoad()
         questionsTableView.delegate = self
         questionsTableView.dataSource = self
+        
+        if isDefaultQuestionController {
+            promptLabel.text = "What questions would you like to ask every day?"
+            nextButtonImageView.image = UIImage(named:"NextButtonInverted")
+        } else {
+            promptLabel.text = "What questions would you like to ask today?"
+            nextButtonImageView.image = UIImage(named:"LogoInverted")
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -127,7 +153,7 @@ class DefaultQuestionsViewController: UIViewController {
     
 }
 
-extension DefaultQuestionsViewController : UITableViewDelegate, UITableViewDataSource {
+extension QuestionCreationViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentQuestion = questionsCreated[indexPath.row]

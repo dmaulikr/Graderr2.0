@@ -15,6 +15,23 @@ import FirebaseDatabase
 
 struct QuestionService {
     
+    
+    struct Advanced {
+        st
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     static func setCustomQuestions(forCourse course : Course, forDateString dateString: String = Utility.dateToString(), questionDict : [String: String], success: @escaping (Bool) -> Void) {
         let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("customQuestions").child(dateString)
         
@@ -40,7 +57,60 @@ struct QuestionService {
             
             
         }
+    }
+    
+    static func setAllDefaultQuestions(forTeacher teacher : Teacher, questionDict : [String:String], success: @escaping (Bool) -> Void) {
         
+
+        TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: { (courses) in
+            guard let courses = courses else {
+                print("This teacher does not have any courses that they are teaching")
+                return success(false)
+            }
+            let dispatchGroup = DispatchGroup()
+            
+            for course in courses {
+                dispatchGroup.enter()
+                QuestionService.setDefaultCourseQuestions(forCourse: course, questionDict: questionDict, success: {(currentSuccess) in
+                    print(currentSuccess ? "Able to succesfully upload default course questions for \(course.title)" : "Error uploading default course questions for \(course.title)")
+                    if !currentSuccess { success(false) }
+                    dispatchGroup.leave()
+                    
+                })
+            }
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                success(true)
+            })
+            
+        })
+    }
+    
+    static func setAllCustomQuestions(forTeacher teacher : Teacher, questionDict : [String:String], success: @escaping (Bool) -> Void) {
+        
+        TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: { (courses) in
+            guard let courses = courses else {
+                print("This teacher does not have any courses that they are teaching")
+                return success(false)
+            }
+            let dispatchGroup = DispatchGroup()
+            
+            for course in courses {
+                dispatchGroup.enter()
+                QuestionService.setCustomQuestions(forCourse: course, questionDict: questionDict, success: {(currentSuccess) in
+                    print(currentSuccess ? "Able to succesfully upload default course questions for \(course.title)" : "Error uploading default course questions for \(course.title)")
+                    if !currentSuccess { success(false) }
+                    dispatchGroup.leave()
+                    
+                })
+            }
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                success(true)
+            })
+            
+        })
+  
     }
     
     static func setDefaultSchoolQuestions(forSchoolID schoolID : String, questionDict : [String: String], success: @escaping (Bool) -> Void) {

@@ -43,7 +43,7 @@
 		EA8298D41F54D5A300355D7B /* FeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */; };
 		EA8298D61F54D90000355D7B /* FeedbackItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D51F54D90000355D7B /* FeedbackItemTableViewController.swift */; };
 		EA8298D81F56229B00355D7B /* Development Timeline in Resources */ = {isa = PBXBuildFile; fileRef = EA8298D71F56229B00355D7B /* Development Timeline */; };
-		EA8298DA1F571EC800355D7B /* DefaultQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D91F571EC800355D7B /* DefaultQuestionsViewController.swift */; };
+		EA8298DA1F571EC800355D7B /* QuestionCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D91F571EC800355D7B /* QuestionCreationController.swift */; };
 		EA8298DC1F571EFA00355D7B /* CustomQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */; };
 		EA8298DE1F57265000355D7B /* QuestionCreationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298DD1F57265000355D7B /* QuestionCreationCell.swift */; };
 		EAB3B3E31F39D99900F61136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E21F39D99900F61136 /* AppDelegate.swift */; };
@@ -116,7 +116,7 @@
 		EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewController.swift; sourceTree = "<group>"; };
 		EA8298D51F54D90000355D7B /* FeedbackItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemTableViewController.swift; sourceTree = "<group>"; };
 		EA8298D71F56229B00355D7B /* Development Timeline */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Development Timeline"; sourceTree = "<group>"; };
-		EA8298D91F571EC800355D7B /* DefaultQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultQuestionsViewController.swift; sourceTree = "<group>"; };
+		EA8298D91F571EC800355D7B /* QuestionCreationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCreationController.swift; sourceTree = "<group>"; };
 		EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomQuestionsViewController.swift; sourceTree = "<group>"; };
 		EA8298DD1F57265000355D7B /* QuestionCreationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCreationCell.swift; sourceTree = "<group>"; };
 		EAB3B3DF1F39D99900F61136 /* Graderr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graderr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,7 +296,7 @@
 		EA4EC4BB1F4C4F3B008F43A1 /* TeacherInterface */ = {
 			isa = PBXGroup;
 			children = (
-				EA8298D91F571EC800355D7B /* DefaultQuestionsViewController.swift */,
+				EA8298D91F571EC800355D7B /* QuestionCreationController.swift */,
 				EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */,
 				EA4EC4B71F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift */,
 				EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */,
@@ -710,7 +710,7 @@
 				EA8298CA1F54B6C800355D7B /* BoolFieldTableViewCell.swift in Sources */,
 				EA08A30A1F39DCF3007F8E12 /* Course.swift in Sources */,
 				EAEFF5281F41CE9300D31920 /* StudentService.swift in Sources */,
-				EA8298DA1F571EC800355D7B /* DefaultQuestionsViewController.swift in Sources */,
+				EA8298DA1F571EC800355D7B /* QuestionCreationController.swift in Sources */,
 				EAE587F71F4474C3008FF544 /* SchoolService.swift in Sources */,
 				EA8298CE1F54B6E000355D7B /* NumericFieldTableViewCell.swift in Sources */,
 				EA4EC4B51F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift in Sources */,

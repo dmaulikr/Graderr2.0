@@ -48,6 +48,7 @@ class TeacherRegistrationViewController: UIViewController {
     
     @IBAction func addClass(_ sender: Any) {
         CourseService.createCourse(teacherID: Teacher.current.teacherID, courseTitle: addClassTextField.text!, schoolID: selectedSchool!.schoolID, completion: {(course) in
+
             if let course = course {
                 self.coursesTaught.append(course)
             } else {
@@ -55,22 +56,24 @@ class TeacherRegistrationViewController: UIViewController {
             }
   
         })
+        addClassTextField.text = ""
     }
     
     @IBAction func signUp(_ sender: Any) {
-        
+        Utility.startLoading(view: self.view)
         TeacherService.createTeacher(Auth.auth().currentUser!, fullname: nameTextField.text!, schoolID: selectedSchool!.schoolID) { (teacher) in
+            Utility.endLoading()
             guard let teacher = teacher else {
                 return
             }
+            self.classesTaughtStackView.alpha = 1
+            self.doneButton.alpha = 1
             Teacher.setCurrent(teacher, writeToUserDefaults: false)
         }
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        let initialViewController = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateViewController(withIdentifier: "defaultQuestionCreation")
-        self.view.window?.rootViewController = initialViewController
-        self.view.window?.makeKeyAndVisible()
+        self.performSegue(withIdentifier: "toCreateQuestions", sender: self)
         
     }
    
@@ -81,6 +84,8 @@ class TeacherRegistrationViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        classesTaughtStackView.alpha = 0
+        doneButton.alpha = 0
         super.viewDidLoad()
         //tableview setup
         classTableView.delegate = self
