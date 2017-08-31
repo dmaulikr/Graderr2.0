@@ -19,9 +19,9 @@ class BoolFieldTableViewCell: UITableViewCell {
     weak var delegate: BoolFieldTableViewCellDelegate?
     
     @IBOutlet weak var questionText: UILabel!
-    
+    @IBOutlet weak var falseImageView: UIImageView!
     @IBOutlet weak var falseButton: UIButton!
-    
+    @IBOutlet weak var trueImageView: UIImageView!
     @IBOutlet weak var trueButton: UIButton!
     
     var row : Int?

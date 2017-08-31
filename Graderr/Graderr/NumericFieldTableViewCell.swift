@@ -18,7 +18,12 @@ class NumericFieldTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questionText: UILabel!
     
+    @IBOutlet var selectedImageViewCollection: [UIImageView]!
+    
+    
     var row : Int?
+   
+    
     
     
     

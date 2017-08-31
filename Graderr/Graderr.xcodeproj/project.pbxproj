@@ -33,7 +33,7 @@
 		EA545A4E1F4C55800045D22E /* StudentPollingInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA545A4D1F4C55800045D22E /* StudentPollingInterface.storyboard */; };
 		EA545A501F4C55A50045D22E /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A4F1F4C55A50045D22E /* ReviewService.swift */; };
 		EA545A541F4DA6F00045D22E /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A531F4DA6F00045D22E /* QuestionService.swift */; };
-		EA545A581F4DAB080045D22E /* Question+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A571F4DAB080045D22E /* Question+Utility.swift */; };
+		EA545A581F4DAB080045D22E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A571F4DAB080045D22E /* Utility.swift */; };
 		EA8298C41F54B54600355D7B /* PollSubmissionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298C31F54B54600355D7B /* PollSubmissionTableViewController.swift */; };
 		EA8298CA1F54B6C800355D7B /* BoolFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298C91F54B6C800355D7B /* BoolFieldTableViewCell.swift */; };
 		EA8298CC1F54B6CF00355D7B /* WrittenFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298CB1F54B6CF00355D7B /* WrittenFieldTableViewCell.swift */; };
@@ -42,6 +42,10 @@
 		EA8298D21F54D58F00355D7B /* FeedbackItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D11F54D58F00355D7B /* FeedbackItemsTableViewCell.swift */; };
 		EA8298D41F54D5A300355D7B /* FeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */; };
 		EA8298D61F54D90000355D7B /* FeedbackItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D51F54D90000355D7B /* FeedbackItemTableViewController.swift */; };
+		EA8298D81F56229B00355D7B /* Development Timeline in Resources */ = {isa = PBXBuildFile; fileRef = EA8298D71F56229B00355D7B /* Development Timeline */; };
+		EA8298DA1F571EC800355D7B /* DefaultQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D91F571EC800355D7B /* DefaultQuestionsViewController.swift */; };
+		EA8298DC1F571EFA00355D7B /* CustomQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */; };
+		EA8298DE1F57265000355D7B /* QuestionCreationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298DD1F57265000355D7B /* QuestionCreationCell.swift */; };
 		EAB3B3E31F39D99900F61136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E21F39D99900F61136 /* AppDelegate.swift */; };
 		EAB3B3EB1F39D99900F61136 /* Graderr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAB3B3E91F39D99900F61136 /* Graderr.xcdatamodeld */; };
 		EAB3B3ED1F39D99900F61136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB3B3EC1F39D99900F61136 /* Assets.xcassets */; };
@@ -102,7 +106,7 @@
 		EA545A4D1F4C55800045D22E /* StudentPollingInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentPollingInterface.storyboard; sourceTree = "<group>"; };
 		EA545A4F1F4C55A50045D22E /* ReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		EA545A531F4DA6F00045D22E /* QuestionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
-		EA545A571F4DAB080045D22E /* Question+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Question+Utility.swift"; sourceTree = "<group>"; };
+		EA545A571F4DAB080045D22E /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		EA8298C31F54B54600355D7B /* PollSubmissionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollSubmissionTableViewController.swift; sourceTree = "<group>"; };
 		EA8298C91F54B6C800355D7B /* BoolFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolFieldTableViewCell.swift; sourceTree = "<group>"; };
 		EA8298CB1F54B6CF00355D7B /* WrittenFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrittenFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,6 +115,10 @@
 		EA8298D11F54D58F00355D7B /* FeedbackItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemsTableViewCell.swift; sourceTree = "<group>"; };
 		EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewController.swift; sourceTree = "<group>"; };
 		EA8298D51F54D90000355D7B /* FeedbackItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemTableViewController.swift; sourceTree = "<group>"; };
+		EA8298D71F56229B00355D7B /* Development Timeline */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Development Timeline"; sourceTree = "<group>"; };
+		EA8298D91F571EC800355D7B /* DefaultQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultQuestionsViewController.swift; sourceTree = "<group>"; };
+		EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomQuestionsViewController.swift; sourceTree = "<group>"; };
+		EA8298DD1F57265000355D7B /* QuestionCreationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCreationCell.swift; sourceTree = "<group>"; };
 		EAB3B3DF1F39D99900F61136 /* Graderr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graderr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB3B3E21F39D99900F61136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAB3B3EA1F39D99900F61136 /* Graderr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Graderr.xcdatamodel; sourceTree = "<group>"; };
@@ -214,6 +222,9 @@
 		EA08A3081F39DC91007F8E12 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				EAB3B3EC1F39D99900F61136 /* Assets.xcassets */,
+				EA8298DD1F57265000355D7B /* QuestionCreationCell.swift */,
+				EA8298D71F56229B00355D7B /* Development Timeline */,
 				EAB3B3E21F39D99900F61136 /* AppDelegate.swift */,
 				EA1306C81F3C8446002F30A6 /* Constants.swift */,
 				EAB3B3F11F39D99900F61136 /* Info.plist */,
@@ -285,6 +296,8 @@
 		EA4EC4BB1F4C4F3B008F43A1 /* TeacherInterface */ = {
 			isa = PBXGroup;
 			children = (
+				EA8298D91F571EC800355D7B /* DefaultQuestionsViewController.swift */,
+				EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */,
 				EA4EC4B71F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift */,
 				EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */,
 				EA8298D51F54D90000355D7B /* FeedbackItemTableViewController.swift */,
@@ -295,7 +308,7 @@
 		EA545A591F4EFB170045D22E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				EA545A571F4DAB080045D22E /* Question+Utility.swift */,
+				EA545A571F4DAB080045D22E /* Utility.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -330,7 +343,6 @@
 				EA08A3071F39DC4C007F8E12 /* Controllers */,
 				EA08A3061F39DC44007F8E12 /* Storyboards */,
 				EA1306D01F3C854C002F30A6 /* Services */,
-				EAB3B3EC1F39D99900F61136 /* Assets.xcassets */,
 				EA545A591F4EFB170045D22E /* Utility */,
 				EA08A3081F39DC91007F8E12 /* Supporting */,
 			);
@@ -482,6 +494,7 @@
 				EA1306BC1F3B2983002F30A6 /* TeacherInterface.storyboard in Resources */,
 				EA545A4E1F4C55800045D22E /* StudentPollingInterface.storyboard in Resources */,
 				EA1306C51F3C839F002F30A6 /* GoogleService-Info.plist in Resources */,
+				EA8298D81F56229B00355D7B /* Development Timeline in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,8 +695,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA545A581F4DAB080045D22E /* Question+Utility.swift in Sources */,
+				EA545A581F4DAB080045D22E /* Utility.swift in Sources */,
 				EA1306C01F3B29D6002F30A6 /* LoginViewController.swift in Sources */,
+				EA8298DC1F571EFA00355D7B /* CustomQuestionsViewController.swift in Sources */,
 				EA545A501F4C55A50045D22E /* ReviewService.swift in Sources */,
 				EA8298D61F54D90000355D7B /* FeedbackItemTableViewController.swift in Sources */,
 				EAE587E51F43172F008FF544 /* StudentRegistrationViewController.swift in Sources */,
@@ -696,10 +710,12 @@
 				EA8298CA1F54B6C800355D7B /* BoolFieldTableViewCell.swift in Sources */,
 				EA08A30A1F39DCF3007F8E12 /* Course.swift in Sources */,
 				EAEFF5281F41CE9300D31920 /* StudentService.swift in Sources */,
+				EA8298DA1F571EC800355D7B /* DefaultQuestionsViewController.swift in Sources */,
 				EAE587F71F4474C3008FF544 /* SchoolService.swift in Sources */,
 				EA8298CE1F54B6E000355D7B /* NumericFieldTableViewCell.swift in Sources */,
 				EA4EC4B51F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift in Sources */,
 				EA8298D41F54D5A300355D7B /* FeedbackTableViewController.swift in Sources */,
+				EA8298DE1F57265000355D7B /* QuestionCreationCell.swift in Sources */,
 				EA08A3131F39E3A3007F8E12 /* Field.swift in Sources */,
 				EA08A3111F39E09B007F8E12 /* Review.swift in Sources */,
 				EAE587E31F4316FD008FF544 /* TeacherRegistrationViewController.swift in Sources */,

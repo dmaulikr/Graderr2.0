@@ -68,7 +68,7 @@ class TeacherRegistrationViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        let initialViewController = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateInitialViewController()!
+        let initialViewController = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateViewController(withIdentifier: "defaultQuestionCreation")
         self.view.window?.rootViewController = initialViewController
         self.view.window?.makeKeyAndVisible()
         

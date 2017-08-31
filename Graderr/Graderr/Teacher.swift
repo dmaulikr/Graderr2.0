@@ -60,7 +60,7 @@ class Teacher : NSObject {
         
         super.init()
     }
-
+ 
     static func setCurrent(_ teacher: Teacher, writeToUserDefaults: Bool = false) {
         if writeToUserDefaults {
             // 3

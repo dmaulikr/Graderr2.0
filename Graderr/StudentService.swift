@@ -58,6 +58,18 @@ struct StudentService {
     }
     
     
+    static func showCoursesIDsReviewedToday(forStudentID studentID: String, forDateString dateAsString : String = Utility.dateToString(), completion: @escaping ([String]?) -> Void) {
+        let ref = Database.database().reference().child("studentReviews").child(studentID).child(dateAsString)
+        ref.observeSingleEvent(of: .value, with: {(snapshot) in
+            guard let dict = snapshot.value as? [String : Any] else {
+                print("Unable to retrieve review ids for the student")
+                return completion(nil)
+            }
+            completion(Array(dict.keys))
+        })
+        
+        
+    }
     
     static func showEnrolledCourses(student: Student, completion: @escaping ([Course]?) -> Void) {
         StudentService.showCourseIDs(forStudentID: student.studentID, completion: {(courseIDs) in

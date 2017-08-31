@@ -13,8 +13,8 @@ class StudentTableViewCell: UITableViewCell {
     @IBOutlet weak var classNameLabel: UILabel!
     
     @IBOutlet weak var teacherNameLabel: UILabel!
-    
-    @IBOutlet weak var haveTakenClassLabel: UILabel!
+
+    @IBOutlet weak var checkmarkImageView: UIImageView!
     
     
     

@@ -32,7 +32,7 @@ struct ReviewService {
             "courseReviews/\(review.schoolID)/\(review.courseID)/\(dateString)/\(review.studentID)" : review.reviewID,
             "schoolReviews/\(review.schoolID)/\(dateString)/\(review.courseID)/\(review.reviewID))" : review.studentID,
             "studentReviews/\(review.studentID)/\(dateString)/\(review.courseID)" : review.reviewID,
-            "reviewInfo" : review.dictValue,
+            "reviewInfo/\(review.reviewID)" : review.dictValue,
             ]
         
         Database.database().reference().updateChildValues(data) { (error, _) in
@@ -144,6 +144,8 @@ struct ReviewService {
         })
         
     }
+    
+
     
 
     

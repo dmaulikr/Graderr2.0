@@ -34,7 +34,7 @@ class Review {
             }
         }
         
-        return [reviewID : ["reviewData": reviewData, "studentID" : studentID, "courseID" : courseID, "schoolID" : schoolID]]
+        return ["reviewData": reviewData, "studentID" : studentID, "courseID" : courseID, "schoolID" : schoolID]
     }
     
     init (reviewID: String = Utility.newFirebaseKey(), studentID : String, courseID: String, schoolID: String, fields: [Field]) {

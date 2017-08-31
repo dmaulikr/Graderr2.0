@@ -21,10 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         FirebaseApp.configure()
+        configureUI()
         
         configureInitialRootViewController(for: window)
         // Override point for customization after application launch.
         return true
+    }
+    
+    func configureUI (){
+//        UINavigationBar.appearance().backgroundColor = UIColor.init(red: 59/255, green: 209/255, blue: 134/255, alpha: 1)
+//        UINavigationBar.appearance().tintColor = UIColor.white
+//        UINavigationBar.appearance().isTranluscent = false
+//        UINavigationBar.appearance().alpha = 1
+//        UINavigationBar.appearance().isOpaque = true
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
