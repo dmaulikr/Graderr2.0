@@ -99,6 +99,10 @@ class StudentInterfaceTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if !reviewedCoursesIDs.contains(registeredCourses[indexPath.row].courseID) {
+            
+            
+            
+            
             performSegue(withIdentifier: "toPoll", sender: self)
         } else {
             Utility.createAlert(title: "Already Submitted", message: "You have already submitted a review for today.", sender: self)

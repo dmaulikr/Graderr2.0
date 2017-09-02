@@ -734,7 +734,10 @@
                                             </tableView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jAa-Wu-Hi7" secondAttribute="trailing" id="4l1-ya-RSa"/>
                                             <constraint firstAttribute="width" constant="254" id="GEk-bQ-ShT"/>
+                                            <constraint firstItem="jAa-Wu-Hi7" firstAttribute="leading" secondItem="sNG-b0-QMK" secondAttribute="leading" id="daR-Ky-NIM"/>
+                                            <constraint firstItem="jAa-Wu-Hi7" firstAttribute="width" secondItem="sNG-b0-QMK" secondAttribute="width" id="f0d-Hm-Izx"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>

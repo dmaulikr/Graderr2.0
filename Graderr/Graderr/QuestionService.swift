@@ -15,41 +15,56 @@ import FirebaseDatabase
 
 struct QuestionService {
     
-    
-    struct Advanced {
-        st
-        
-        
-        
-        
-        
-        
-        
-    }
+
     
     
     
-    
-    
-    
+    //THIS WILL ALSO WRITE THE DEFAULT QUESTIONS TO THE DATABASE
     static func setCustomQuestions(forCourse course : Course, forDateString dateString: String = Utility.dateToString(), questionDict : [String: String], success: @escaping (Bool) -> Void) {
-        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("customQuestions").child(dateString)
         
-        ref.setValue(questionDict) { (error,ref) in
-            if let error = error {
-                fatalError(error.localizedDescription)
+
+        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("customQuestions").child(dateString)
+        getDefaultQuestionsDict(forCourse: course, completion: {(dict) in
+            guard let dict = dict else {
+                fatalError("No default questions set for this course")
             }
-            success(true)
+            var finalDict = dict
+            finalDict.update(other: questionDict)
             
-            
-        }
+            ref.setValue(finalDict) { (error,ref) in
+                if let error = error {
+                    fatalError(error.localizedDescription)
+                }
+                success(true)
+            }
+
+        })
+        
+
         
     }
+    
+    static func getDefaultQuestionsDict(forCourse course : Course, completion: @escaping ([String:String]?) -> Void) {
+        let ref = Database.database().reference().child("teacherDefaultQuestions").child(course.teacherID)
+        ref.observeSingleEvent(of: .value, with: {(snapshot) in
+            guard let questionDict = snapshot.value as? [String: String] else {
+                print("Unable to convert snapshot to questionDict for default school questions")
+                return completion(nil)
+            }
+            completion(questionDict)
+   
+        })
+  
+    }
+
+    
+    
     
     static func setDefaultCourseQuestions(forCourse course : Course, questionDict : [String: String], success: @escaping (Bool) -> Void) {
-        let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("defaultQuestions")
         
-        ref.setValue(questionDict) { (error,ref) in
+        
+        let data = ["questions/\(course.schoolID)/courses/\(course.courseID)/defaultQuestions" : questionDict, "teacherDefaultQuestions/\(course.teacherID)" : questionDict]
+        Database.database().reference().updateChildValues(data) { (error,ref) in
             if let error = error {
                 fatalError(error.localizedDescription)
             }
@@ -86,6 +101,7 @@ struct QuestionService {
         })
     }
     
+    //NEW VERSION; makes sure to also include the data from the defaults
     static func setAllCustomQuestions(forTeacher teacher : Teacher, questionDict : [String:String], success: @escaping (Bool) -> Void) {
         
         TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: { (courses) in
@@ -112,6 +128,35 @@ struct QuestionService {
         })
   
     }
+    
+    
+    //OLD VERSION: Only kept track of custom questions uploaded by teachers on the day of. The newer implementation means that instead, when teachers write to custom questions it includes all of the default questions as well. That way, when a student logs on they can't actually fill out data UNLESS there are custom questions set for the day.
+//    static func setAllCustomQuestions(forTeacher teacher : Teacher, questionDict : [String:String], success: @escaping (Bool) -> Void) {
+//        
+//        TeacherService.showCoursesTeaching(forTeacher: Teacher.current, completion: { (courses) in
+//            guard let courses = courses else {
+//                print("This teacher does not have any courses that they are teaching")
+//                return success(false)
+//            }
+//            let dispatchGroup = DispatchGroup()
+//            
+//            for course in courses {
+//                dispatchGroup.enter()
+//                QuestionService.setCustomQuestions(forCourse: course, questionDict: questionDict, success: {(currentSuccess) in
+//                    print(currentSuccess ? "Able to succesfully upload default course questions for \(course.title)" : "Error uploading default course questions for \(course.title)")
+//                    if !currentSuccess { success(false) }
+//                    dispatchGroup.leave()
+//                    
+//                })
+//            }
+//            
+//            dispatchGroup.notify(queue: .main, execute: {
+//                success(true)
+//            })
+//            
+//        })
+//        
+//    }
     
     static func setDefaultSchoolQuestions(forSchoolID schoolID : String, questionDict : [String: String], success: @escaping (Bool) -> Void) {
         let ref = Database.database().reference().child("questions").child(schoolID).child("defaultQuestions")
@@ -251,4 +296,12 @@ struct QuestionService {
     }
  
     
+}
+
+extension Dictionary {
+    mutating func update(other:Dictionary) {
+        for (key,value) in other {
+            self.updateValue(value, forKey:key)
+        }
+    }
 }

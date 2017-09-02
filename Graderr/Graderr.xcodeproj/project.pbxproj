@@ -29,20 +29,24 @@
 		EA4EC4B51F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EC4B41F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift */; };
 		EA4EC4B81F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EC4B71F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift */; };
 		EA4EC4BA1F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EC4B91F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift */; };
+		EA53FF701F580A60000783FF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EA53FF6F1F580A60000783FF /* README.md */; };
+		EA53FF721F5823E0000783FF /* CourseFeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53FF711F5823E0000783FF /* CourseFeedbackController.swift */; };
 		EA545A4C1F4C555C0045D22E /* PollCreationInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA545A4B1F4C555C0045D22E /* PollCreationInterface.storyboard */; };
 		EA545A4E1F4C55800045D22E /* StudentPollingInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA545A4D1F4C55800045D22E /* StudentPollingInterface.storyboard */; };
 		EA545A501F4C55A50045D22E /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A4F1F4C55A50045D22E /* ReviewService.swift */; };
 		EA545A541F4DA6F00045D22E /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A531F4DA6F00045D22E /* QuestionService.swift */; };
 		EA545A581F4DAB080045D22E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A571F4DAB080045D22E /* Utility.swift */; };
+		EA62E8C61F583EE000601CD4 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA62E8C51F583EE000601CD4 /* ChartViewController.swift */; };
+		EA814F511F584D72007F70EB /* ChartsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA814F501F584D71007F70EB /* ChartsUtility.swift */; };
+		EA814F531F589541007F70EB /* WrittenFeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA814F521F589541007F70EB /* WrittenFeedbackController.swift */; };
+		EA814F551F589762007F70EB /* DateHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA814F541F589762007F70EB /* DateHeaderCell.swift */; };
+		EA814F571F58978B007F70EB /* QuestionContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA814F561F58978B007F70EB /* QuestionContentCell.swift */; };
 		EA8298C41F54B54600355D7B /* PollSubmissionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298C31F54B54600355D7B /* PollSubmissionTableViewController.swift */; };
 		EA8298CA1F54B6C800355D7B /* BoolFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298C91F54B6C800355D7B /* BoolFieldTableViewCell.swift */; };
 		EA8298CC1F54B6CF00355D7B /* WrittenFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298CB1F54B6CF00355D7B /* WrittenFieldTableViewCell.swift */; };
 		EA8298CE1F54B6E000355D7B /* NumericFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298CD1F54B6E000355D7B /* NumericFieldTableViewCell.swift */; };
 		EA8298D01F54D57E00355D7B /* FeedbackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298CF1F54D57E00355D7B /* FeedbackTableViewCell.swift */; };
 		EA8298D21F54D58F00355D7B /* FeedbackItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D11F54D58F00355D7B /* FeedbackItemsTableViewCell.swift */; };
-		EA8298D41F54D5A300355D7B /* FeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */; };
-		EA8298D61F54D90000355D7B /* FeedbackItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D51F54D90000355D7B /* FeedbackItemTableViewController.swift */; };
-		EA8298D81F56229B00355D7B /* Development Timeline in Resources */ = {isa = PBXBuildFile; fileRef = EA8298D71F56229B00355D7B /* Development Timeline */; };
 		EA8298DA1F571EC800355D7B /* QuestionCreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298D91F571EC800355D7B /* QuestionCreationController.swift */; };
 		EA8298DC1F571EFA00355D7B /* CustomQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */; };
 		EA8298DE1F57265000355D7B /* QuestionCreationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8298DD1F57265000355D7B /* QuestionCreationCell.swift */; };
@@ -102,20 +106,24 @@
 		EA4EC4B41F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInterfaceTableViewController.swift; sourceTree = "<group>"; };
 		EA4EC4B71F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherInterfaceTableViewController.swift; sourceTree = "<group>"; };
 		EA4EC4B91F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherInterfaceTableViewCell.swift; sourceTree = "<group>"; };
+		EA53FF6F1F580A60000783FF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		EA53FF711F5823E0000783FF /* CourseFeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFeedbackController.swift; sourceTree = "<group>"; };
 		EA545A4B1F4C555C0045D22E /* PollCreationInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PollCreationInterface.storyboard; sourceTree = "<group>"; };
 		EA545A4D1F4C55800045D22E /* StudentPollingInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentPollingInterface.storyboard; sourceTree = "<group>"; };
 		EA545A4F1F4C55A50045D22E /* ReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		EA545A531F4DA6F00045D22E /* QuestionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
 		EA545A571F4DAB080045D22E /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		EA62E8C51F583EE000601CD4 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		EA814F501F584D71007F70EB /* ChartsUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsUtility.swift; sourceTree = "<group>"; };
+		EA814F521F589541007F70EB /* WrittenFeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrittenFeedbackController.swift; sourceTree = "<group>"; };
+		EA814F541F589762007F70EB /* DateHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHeaderCell.swift; sourceTree = "<group>"; };
+		EA814F561F58978B007F70EB /* QuestionContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionContentCell.swift; sourceTree = "<group>"; };
 		EA8298C31F54B54600355D7B /* PollSubmissionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollSubmissionTableViewController.swift; sourceTree = "<group>"; };
 		EA8298C91F54B6C800355D7B /* BoolFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolFieldTableViewCell.swift; sourceTree = "<group>"; };
 		EA8298CB1F54B6CF00355D7B /* WrittenFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrittenFieldTableViewCell.swift; sourceTree = "<group>"; };
 		EA8298CD1F54B6E000355D7B /* NumericFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericFieldTableViewCell.swift; sourceTree = "<group>"; };
 		EA8298CF1F54D57E00355D7B /* FeedbackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewCell.swift; sourceTree = "<group>"; };
 		EA8298D11F54D58F00355D7B /* FeedbackItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemsTableViewCell.swift; sourceTree = "<group>"; };
-		EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewController.swift; sourceTree = "<group>"; };
-		EA8298D51F54D90000355D7B /* FeedbackItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemTableViewController.swift; sourceTree = "<group>"; };
-		EA8298D71F56229B00355D7B /* Development Timeline */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Development Timeline"; sourceTree = "<group>"; };
 		EA8298D91F571EC800355D7B /* QuestionCreationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCreationController.swift; sourceTree = "<group>"; };
 		EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomQuestionsViewController.swift; sourceTree = "<group>"; };
 		EA8298DD1F57265000355D7B /* QuestionCreationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCreationCell.swift; sourceTree = "<group>"; };
@@ -224,7 +232,7 @@
 			children = (
 				EAB3B3EC1F39D99900F61136 /* Assets.xcassets */,
 				EA8298DD1F57265000355D7B /* QuestionCreationCell.swift */,
-				EA8298D71F56229B00355D7B /* Development Timeline */,
+				EA53FF6F1F580A60000783FF /* README.md */,
 				EAB3B3E21F39D99900F61136 /* AppDelegate.swift */,
 				EA1306C81F3C8446002F30A6 /* Constants.swift */,
 				EAB3B3F11F39D99900F61136 /* Info.plist */,
@@ -274,12 +282,14 @@
 			isa = PBXGroup;
 			children = (
 				EA4EC4B11F4C4C4E008F43A1 /* StudentTableViewCell.swift */,
+				EA814F561F58978B007F70EB /* QuestionContentCell.swift */,
 				EA4EC4B91F4C4F1F008F43A1 /* TeacherInterfaceTableViewCell.swift */,
 				EA8298C91F54B6C800355D7B /* BoolFieldTableViewCell.swift */,
 				EA8298CB1F54B6CF00355D7B /* WrittenFieldTableViewCell.swift */,
 				EA8298CD1F54B6E000355D7B /* NumericFieldTableViewCell.swift */,
 				EA8298CF1F54D57E00355D7B /* FeedbackTableViewCell.swift */,
 				EA8298D11F54D58F00355D7B /* FeedbackItemsTableViewCell.swift */,
+				EA814F541F589762007F70EB /* DateHeaderCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -297,10 +307,11 @@
 			isa = PBXGroup;
 			children = (
 				EA8298D91F571EC800355D7B /* QuestionCreationController.swift */,
+				EA62E8C51F583EE000601CD4 /* ChartViewController.swift */,
 				EA8298DB1F571EFA00355D7B /* CustomQuestionsViewController.swift */,
 				EA4EC4B71F4C4EC2008F43A1 /* TeacherInterfaceTableViewController.swift */,
-				EA8298D31F54D5A300355D7B /* FeedbackTableViewController.swift */,
-				EA8298D51F54D90000355D7B /* FeedbackItemTableViewController.swift */,
+				EA53FF711F5823E0000783FF /* CourseFeedbackController.swift */,
+				EA814F521F589541007F70EB /* WrittenFeedbackController.swift */,
 			);
 			name = TeacherInterface;
 			sourceTree = "<group>";
@@ -309,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				EA545A571F4DAB080045D22E /* Utility.swift */,
+				EA814F501F584D71007F70EB /* ChartsUtility.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -494,7 +506,6 @@
 				EA1306BC1F3B2983002F30A6 /* TeacherInterface.storyboard in Resources */,
 				EA545A4E1F4C55800045D22E /* StudentPollingInterface.storyboard in Resources */,
 				EA1306C51F3C839F002F30A6 /* GoogleService-Info.plist in Resources */,
-				EA8298D81F56229B00355D7B /* Development Timeline in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +671,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Graderr/Pods-Graderr-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
@@ -673,6 +685,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
@@ -696,10 +709,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA545A581F4DAB080045D22E /* Utility.swift in Sources */,
+				EA814F511F584D72007F70EB /* ChartsUtility.swift in Sources */,
 				EA1306C01F3B29D6002F30A6 /* LoginViewController.swift in Sources */,
 				EA8298DC1F571EFA00355D7B /* CustomQuestionsViewController.swift in Sources */,
 				EA545A501F4C55A50045D22E /* ReviewService.swift in Sources */,
-				EA8298D61F54D90000355D7B /* FeedbackItemTableViewController.swift in Sources */,
+				EA62E8C61F583EE000601CD4 /* ChartViewController.swift in Sources */,
+				EA814F551F589762007F70EB /* DateHeaderCell.swift in Sources */,
 				EAE587E51F43172F008FF544 /* StudentRegistrationViewController.swift in Sources */,
 				EAE587F51F44726B008FF544 /* CourseService.swift in Sources */,
 				EA8298D21F54D58F00355D7B /* FeedbackItemsTableViewCell.swift in Sources */,
@@ -712,9 +727,11 @@
 				EAEFF5281F41CE9300D31920 /* StudentService.swift in Sources */,
 				EA8298DA1F571EC800355D7B /* QuestionCreationController.swift in Sources */,
 				EAE587F71F4474C3008FF544 /* SchoolService.swift in Sources */,
+				EA53FF701F580A60000783FF /* README.md in Sources */,
+				EA814F531F589541007F70EB /* WrittenFeedbackController.swift in Sources */,
+				EA814F571F58978B007F70EB /* QuestionContentCell.swift in Sources */,
 				EA8298CE1F54B6E000355D7B /* NumericFieldTableViewCell.swift in Sources */,
 				EA4EC4B51F4C4D00008F43A1 /* StudentInterfaceTableViewController.swift in Sources */,
-				EA8298D41F54D5A300355D7B /* FeedbackTableViewController.swift in Sources */,
 				EA8298DE1F57265000355D7B /* QuestionCreationCell.swift in Sources */,
 				EA08A3131F39E3A3007F8E12 /* Field.swift in Sources */,
 				EA08A3111F39E09B007F8E12 /* Review.swift in Sources */,
@@ -729,6 +746,7 @@
 				EAB3B3E31F39D99900F61136 /* AppDelegate.swift in Sources */,
 				EA8298CC1F54B6CF00355D7B /* WrittenFieldTableViewCell.swift in Sources */,
 				EAE587F91F4475A0008FF544 /* School.swift in Sources */,
+				EA53FF721F5823E0000783FF /* CourseFeedbackController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

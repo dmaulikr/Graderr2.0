@@ -92,7 +92,7 @@ class QuestionCreationViewController: UIViewController {
             
         } else {
             Utility.startLoading(view: self.view)
-            QuestionService.setAllDefaultQuestions(forTeacher: Teacher.current, questionDict: Utility.arrayOfTuplesIntoDictionary(array: self.questionsCreated), success: {(success) in
+            QuestionService.setAllCustomQuestions(forTeacher: Teacher.current, questionDict: Utility.arrayOfTuplesIntoDictionary(array: self.questionsCreated), success: {(success) in
                 Utility.endLoading()
                 
                 if success {

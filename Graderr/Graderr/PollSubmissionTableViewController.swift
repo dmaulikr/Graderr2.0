@@ -54,10 +54,12 @@ class PollSubmissionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Utility.startLoading(view: self.view)
-        QuestionService.getQuestions(forCourse: currentCourse!, completion: {(fields) in
+        QuestionService.getCustomQuestions(forCourse: currentCourse!, completion: {(fields) in
             Utility.endLoading()    
             guard let fields = fields else {
                 print("Unable to obtain questions succesfully for the given course")
+                self.navigationController?.popViewController(animated: true)
+                Utility.createAlert(title: "Error", message: "Your teacher has not yet inputted questions for today's class.", sender: self.navigationController!.topViewController!)
                 return
             }
             self.fields = fields
