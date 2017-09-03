@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/AppDelegate.swift"
-            timestampString = "525718716.250635"
+            timestampString = "526069571.694195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "configureInitialRootViewController(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/AppDelegate.swift"
-            timestampString = "525718716.250635"
+            timestampString = "526069571.694195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "configureInitialRootViewController(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentService.swift"
-            timestampString = "525739412.390318"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "showEnrolledCourses(student:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/StudentRegistrationViewController.swift"
-            timestampString = "525644318.153327"
+            timestampString = "526121452.124047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/StudentRegistrationViewController.swift"
+            timestampString = "526121452.124047"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
             <Locations>
@@ -74,27 +90,27 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/StudentRegistrationViewController.swift"
-                  timestampString = "525885813.060866"
+                  timestampString = "526123796.811263"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "689">
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "352">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Graderr.StudentRegistrationViewController.(tableView (__ObjC.UITableView, didSelectRowAt : Foundation.IndexPath) -&gt; ()).(closure #2)"
+                  symbolName = "Graderr.StudentRegistrationViewController.(tableView (__ObjC.UITableView, didSelectRowAt : Foundation.IndexPath) -&gt; ()).(closure #1)"
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/StudentRegistrationViewController.swift"
-                  timestampString = "525885813.063292"
+                  timestampString = "526123796.812702"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "27">
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -105,13 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Graderr/StudentRegistrationViewController.swift"
-            timestampString = "525644318.153327"
+            filePath = "Graderr/TeacherInterfaceTableViewController.swift"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,27 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/TeacherInterfaceTableViewController.swift"
-            timestampString = "525644575.526128"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "coursesTaught"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Graderr/TeacherInterfaceTableViewController.swift"
-            timestampString = "525866532.312831"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "setDefaultCourseQuestions(forCourse:questionDict:success:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentService.swift"
-            timestampString = "525647664.907766"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "showCourseIDs(forStudentID:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentService.swift"
-            timestampString = "525739412.390318"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "showEnrolledCourses(student:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentService.swift"
-            timestampString = "525647710.926281"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "showCourseIDs(forStudentID:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentService.swift"
-            timestampString = "525739412.390318"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "showEnrolledCourses(student:completion:)"
             landmarkType = "7">
             <Locations>
@@ -266,12 +266,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/StudentService.swift"
-                  timestampString = "525885813.112947"
+                  timestampString = "526123796.847774"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "30">
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "32">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -281,12 +281,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/StudentService.swift"
-                  timestampString = "525885813.115345"
+                  timestampString = "526123796.849212"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "66">
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "76">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentService.swift"
-            timestampString = "525739412.390318"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "showEnrolledCourses(student:completion:)"
             landmarkType = "7">
             <Locations>
@@ -314,12 +314,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/StudentService.swift"
-                  timestampString = "525885813.121693"
+                  timestampString = "526123796.853803"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "421">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "324">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -329,12 +329,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/StudentService.swift"
-                  timestampString = "525885813.124619"
+                  timestampString = "526123796.855254"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "19">
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "getDefaultSchoolQuestions(forSchoolID:completion:)"
             landmarkType = "7">
             <Locations>
@@ -362,12 +362,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/QuestionService.swift"
-                  timestampString = "525885813.130995"
+                  timestampString = "526123796.859821"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "565">
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "500">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -377,12 +377,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/QuestionService.swift"
-                  timestampString = "525885813.133559"
+                  timestampString = "526123796.862012"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "178"
-                  endingLineNumber = "178"
-                  offsetFromSymbolStart = "43">
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "60">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "getDefaultCourseQuestions(forCourse:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "getDefaultCourseQuestions(forCourse:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "getQuestions(forCourse:forDateString:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "getQuestions(forCourse:forDateString:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "getQuestions(forCourse:forDateString:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "getQuestions(forCourse:forDateString:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525864790.118741"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "getDefaultSchoolQuestions(forSchoolID:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -527,7 +527,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "showReviewIDs(forCourseID:forSchoolID:forDateString:completion:)"
+            landmarkName = "getAnswers(forCourse:forQuestion:forDateString:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -538,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/PollSubmissionTableViewController.swift"
-            timestampString = "525865844.848064"
+            timestampString = "526084488.868123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "didTapNumberButton(_:on:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -559,7 +559,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "getReviews(forCourseID:forSchoolID:forDateString:completion:)"
+            landmarkName = "getAllAnswers(forCourse:forQuestion:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -575,53 +575,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
             endingLineNumber = "68"
-            landmarkName = "getReviews(forCourseID:forSchoolID:forDateString:completion:)"
+            landmarkName = "getAllAnswers(forCourse:forQuestion:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static Graderr.ReviewService.(getReviews (forCourseID : Swift.String, forSchoolID : Swift.String, forDateString : Swift.String, completion : (Swift.Optional&lt;Swift.Array&lt;Graderr.Review&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  symbolName = "static Graderr.ReviewService.getAllAnswers (forCourse : Graderr.Course, forQuestion : Swift.String, completion : (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ReviewService.swift"
-                  timestampString = "525885813.196742"
+                  timestampString = "526123796.905311"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "176">
+                  offsetFromSymbolStart = "708">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static Graderr.ReviewService.(getReviews (forCourseID : Swift.String, forSchoolID : Swift.String, forDateString : Swift.String, completion : (Swift.Optional&lt;Swift.Array&lt;Graderr.Review&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
+                  symbolName = "static Graderr.ReviewService.(getAllAnswers (forCourse : Graderr.Course, forQuestion : Swift.String, completion : (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ReviewService.swift"
-                  timestampString = "525885813.199671"
+                  timestampString = "526123796.906749"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "30">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Graderr.ReviewService.(getReviews (forCourseID : Swift.String, forSchoolID : Swift.String, forDateString : Swift.String, completion : (Swift.Optional&lt;Swift.Array&lt;Graderr.Review&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #2)"
-                  moduleName = "Graderr"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ReviewService.swift"
-                  timestampString = "525885813.202547"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "22">
+                  offsetFromSymbolStart = "648">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -638,8 +623,40 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
-            landmarkName = "getReviews(forCourseID:forSchoolID:forDateString:completion:)"
+            landmarkName = "submitReview(review:forDateString:success:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Graderr.ReviewService.(submitReview (review : Graderr.Review, forDateString : Swift.String, success : (Swift.Bool) -&gt; ()) -&gt; ()).(default argument 1)"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ReviewService.swift"
+                  timestampString = "526123796.911296"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Graderr.ReviewService.submitReview (review : Graderr.Review, forDateString : Swift.String, success : (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ReviewService.swift"
+                  timestampString = "526123796.91276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -649,11 +666,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/StudentInterfaceTableViewController.swift"
-            timestampString = "525740052.462815"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -665,11 +682,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentService.swift"
-            timestampString = "525739332.424282"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "showCoursesIDsReviewedToday(forStudentID:forDateString:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -681,11 +698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentService.swift"
-            timestampString = "525739363.913444"
+            timestampString = "526086152.899722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "showCoursesIDsReviewedToday(forStudentID:forDateString:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -729,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionCreationController.swift"
-            timestampString = "525862913.430226"
+            timestampString = "526091999.642764"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "nextButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -745,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/TeacherInterfaceTableViewController.swift"
-            timestampString = "525866514.022716"
+            timestampString = "526123200.159809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -761,12 +778,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/TeacherInterfaceTableViewController.swift"
-                  timestampString = "525885813.237232"
+                  timestampString = "526123796.933424"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "21">
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "16">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -776,12 +793,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/TeacherInterfaceTableViewController.swift"
-                  timestampString = "525885813.239889"
+                  timestampString = "526123796.934912"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "30">
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -793,11 +810,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionCreationController.swift"
-            timestampString = "525867124.658916"
+            timestampString = "526091999.642764"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "nextButtonPressed(_:)"
             landmarkType = "7">
             <Locations>
@@ -809,12 +826,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/QuestionCreationController.swift"
-                  timestampString = "525885813.246295"
+                  timestampString = "526123796.939604"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "948">
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1224">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -824,12 +841,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/QuestionCreationController.swift"
-                  timestampString = "525885813.248248"
+                  timestampString = "526123796.941104"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "35">
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -841,11 +858,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525867147.149905"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "setAllCustomQuestions(forTeacher:questionDict:success:)"
             landmarkType = "7">
             <Locations>
@@ -857,12 +874,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/QuestionService.swift"
-                  timestampString = "525885813.253316"
+                  timestampString = "526123796.945716"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
-                  offsetFromSymbolStart = "256">
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "252">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -872,12 +889,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/QuestionService.swift"
-                  timestampString = "525885813.255203"
+                  timestampString = "526123796.947175"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "117"
-                  endingLineNumber = "117"
-                  offsetFromSymbolStart = "61">
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -889,11 +906,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/QuestionService.swift"
-            timestampString = "525867154.638621"
+            timestampString = "526090656.765849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "setCustomQuestions(forCourse:forDateString:questionDict:success:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -921,12 +938,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/CourseFeedbackController.swift"
-                  timestampString = "525885813.265628"
+                  timestampString = "526123796.956109"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "38">
+                  offsetFromSymbolStart = "48">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -936,12 +953,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/CourseFeedbackController.swift"
-                  timestampString = "525885813.268709"
+                  timestampString = "526123796.95756"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -951,12 +968,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/CourseFeedbackController.swift"
-                  timestampString = "525885813.271576"
+                  timestampString = "526123796.959065"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "191">
+                  offsetFromSymbolStart = "240">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -966,12 +983,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/CourseFeedbackController.swift"
-                  timestampString = "525885813.273468"
+                  timestampString = "526123796.960468"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "132">
+                  offsetFromSymbolStart = "188">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -983,11 +1000,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/CourseFeedbackController.swift"
-            timestampString = "525884673.963258"
+            timestampString = "526066271.838247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -999,11 +1016,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/CourseFeedbackController.swift"
-            timestampString = "525884673.963258"
+            timestampString = "526066271.838247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1015,11 +1032,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/CourseFeedbackController.swift"
-            timestampString = "525900719.574004"
+            timestampString = "526123103.48294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1031,11 +1048,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/CourseFeedbackController.swift"
-            timestampString = "525900719.574004"
+            timestampString = "526123103.48294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1047,11 +1064,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/CourseFeedbackController.swift"
-            timestampString = "525884673.963258"
+            timestampString = "526066271.838247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1063,11 +1080,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/CourseFeedbackController.swift"
-            timestampString = "525884673.963258"
+            timestampString = "526066271.838247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1079,11 +1096,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/CourseFeedbackController.swift"
-            timestampString = "525900719.574004"
+            timestampString = "526123103.48294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1095,11 +1112,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/CourseFeedbackController.swift"
-            timestampString = "525900719.574004"
+            timestampString = "526123103.48294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1111,11 +1128,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/ChartViewController.swift"
-            timestampString = "525903569.289362"
+            timestampString = "526066549.885141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "configurePieChart()"
             landmarkType = "7">
             <Locations>
@@ -1127,75 +1144,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
-                  timestampString = "525885813.319002"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2091">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Graderr.PieChartViewController.configurePieChart () -&gt; ()"
-                  moduleName = "Graderr"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
-                  timestampString = "525885813.32084"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2478">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Graderr.PieChartViewController.(configurePieChart () -&gt; ()).(closure #2)"
-                  moduleName = "Graderr"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
-                  timestampString = "525885813.322649"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Graderr/ChartViewController.swift"
-            timestampString = "525903569.289362"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "configurePieChart()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Graderr.PieChartViewController.configurePieChart () -&gt; ()"
-                  moduleName = "Graderr"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
-                  timestampString = "525885813.329"
+                  timestampString = "526123796.996376"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "73"
                   endingLineNumber = "73"
-                  offsetFromSymbolStart = "3364">
+                  offsetFromSymbolStart = "1032">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1205,12 +1159,12 @@
                   moduleName = "Graderr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
-                  timestampString = "525885813.33112"
+                  timestampString = "526123796.998186"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "73"
                   endingLineNumber = "73"
-                  offsetFromSymbolStart = "3547">
+                  offsetFromSymbolStart = "1052">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1222,45 +1176,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/ChartViewController.swift"
-            timestampString = "525903569.289362"
+            timestampString = "526066549.885141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "configurePieChart()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Graderr.PieChartViewController.configurePieChart () -&gt; ()"
-                  moduleName = "Graderr"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
-                  timestampString = "525885813.338287"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1291">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Graderr.PieChartViewController.configurePieChart () -&gt; ()"
-                  moduleName = "Graderr"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
-                  timestampString = "525885813.342187"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1312">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1270,11 +1192,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/ChartViewController.swift"
-            timestampString = "525903569.289362"
+            timestampString = "526066549.885141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1286,12 +1208,684 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graderr/ChartViewController.swift"
-            timestampString = "525903569.289362"
+            timestampString = "526066549.885141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.PieChartViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
+                  timestampString = "526123797.011569"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.PieChartViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
+                  timestampString = "526123797.013516"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/ChartViewController.swift"
+            timestampString = "526066549.885141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.PieChartViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
+                  timestampString = "526123797.019366"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.PieChartViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
+                  timestampString = "526123797.024078"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/ReviewService.swift"
+            timestampString = "526063784.346936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getAnswers(forCourse:forQuestion:forDateString:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/ReviewService.swift"
+            timestampString = "526063969.068722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "submitReview(review:forDateString:success:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/ReviewService.swift"
+            timestampString = "526063983.06194"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "submitReviewAsFields(review:forDateString:success:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Graderr.ReviewService.submitReviewAsFields (review : Graderr.Review, forDateString : Swift.String, success : (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ReviewService.swift"
+                  timestampString = "526123797.038274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "984">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Graderr.ReviewService.(submitReviewAsFields (review : Graderr.Review, forDateString : Swift.String, success : (Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ReviewService.swift"
+                  timestampString = "526123797.0402"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/ReviewService.swift"
+            timestampString = "526064349.979295"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getAnswers(forCourse:forQuestion:forDateString:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/PollSubmissionTableViewController.swift"
+            timestampString = "526084488.868123"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "didTapNumberButton(_:on:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/StudentInterfaceTableViewController.swift"
+            timestampString = "526086152.899722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "logout(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/TeacherRegistrationViewController.swift"
+            timestampString = "526121452.124047"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/TeacherRegistrationViewController.swift"
+            timestampString = "526121452.124047"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "doneButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/QuestionCreationController.swift"
+            timestampString = "526091999.642764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/QuestionCreationController.swift"
+            timestampString = "526091999.642764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "nextButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/QuestionCreationController.swift"
+            timestampString = "526091999.642764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "selectionButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/QuestionCreationController.swift"
+            timestampString = "526091999.642764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "createQuestionButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/QuestionCreationController.swift"
+            timestampString = "526091999.642764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "nextButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/QuestionCreationController.swift"
+            timestampString = "526094881.547374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/QuestionCreationController.swift"
+            timestampString = "526094881.547374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/QuestionCreationController.swift"
+            timestampString = "526094881.547374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "numberOfSections(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/WrittenFeedbackController.swift"
+            timestampString = "526123242.140198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.WrittenFeedbackController.viewDidLoad () -&gt; ()"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/WrittenFeedbackController.swift"
+                  timestampString = "526123797.097698"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1792">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.WrittenFeedbackController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/WrittenFeedbackController.swift"
+                  timestampString = "526123797.099141"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/WrittenFeedbackController.swift"
+            timestampString = "526123242.140198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/ReviewService.swift"
+            timestampString = "526122851.655072"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getAllAnswers(forCourse:forQuestion:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/WrittenFeedbackController.swift"
+            timestampString = "526123179.467105"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/WrittenFeedbackController.swift"
+            timestampString = "526123200.246603"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/ChartViewController.swift"
+            timestampString = "526123333.732635"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/ChartViewController.swift"
+            timestampString = "526123340.752039"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.PieChartViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
+                  timestampString = "526123797.12381"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.PieChartViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/ChartViewController.swift"
+                  timestampString = "526123797.126242"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/OverallAnalyticsController.swift"
+            timestampString = "526123370.657891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/OverallAnalyticsController.swift"
+            timestampString = "526123371.943323"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.OverallAnalyticsController.viewDidLoad () -&gt; ()"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/OverallAnalyticsController.swift"
+                  timestampString = "526123797.134401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graderr.OverallAnalyticsController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "Graderr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanstrong/Documents/Graderr/Code/GraderrRepository/Graderr/Graderr/OverallAnalyticsController.swift"
+                  timestampString = "526123797.135839"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/OverallAnalyticsController.swift"
+            timestampString = "526123386.096133"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/Utility.swift"
+            timestampString = "526123391.339147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "stringToDate(dateString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/WrittenFeedbackController.swift"
+            timestampString = "526123470.323108"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graderr/LoginViewController.swift"
+            timestampString = "526123786.249526"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "authUI(_:didSignInWith:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
