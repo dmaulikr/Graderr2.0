@@ -62,7 +62,16 @@ class PollSubmissionTableViewController: UITableViewController {
                 Utility.createAlert(title: "Error", message: "Your teacher has not yet inputted questions for today's class.", sender: self.navigationController!.topViewController!)
                 return
             }
-            self.fields = fields
+            
+            self.fields = fields.sorted(by: {(field1,field2) in
+                switch field1.fieldType! {
+                case .bool: return true
+                case .numeric: return !(field2.fieldType! == .bool)
+                case .written: return false
+                    
+                }
+
+            })
         })
         
         
@@ -145,6 +154,9 @@ extension PollSubmissionTableViewController : BoolFieldTableViewCellDelegate {
 extension PollSubmissionTableViewController : NumericFieldTableViewCellDelegate {
     func didTapNumberButton(_ numberButton: UIButton, on cell: NumericFieldTableViewCell) {
         fields[cell.row!].value = numberButton.tag
+        cell.selectedImageViewCollection.sort(by: {(imageView1,imageView2) in
+            return imageView1.tag < imageView2.tag
+        })
         switch numberButton.tag { //could use a for loop here if this is slow
         case 1:
             cell.selectedImageViewCollection[0].image = UIImage(named:"CircleFilled")

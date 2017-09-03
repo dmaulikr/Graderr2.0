@@ -26,7 +26,8 @@ struct QuestionService {
         let ref = Database.database().reference().child("questions").child(course.schoolID).child("courses").child(course.courseID).child("customQuestions").child(dateString)
         getDefaultQuestionsDict(forCourse: course, completion: {(dict) in
             guard let dict = dict else {
-                fatalError("No default questions set for this course")
+                return success(false)
+                print("No default questions set for this course")
             }
             var finalDict = dict
             finalDict.update(other: questionDict)

@@ -26,7 +26,7 @@ class TeacherRegistrationViewController: UIViewController {
     }
     
     
-    var coursesTaught = [Course]() {
+    var courseTitles = [String]() {
         didSet {
             classTableView.reloadData()
         }
@@ -43,37 +43,76 @@ class TeacherRegistrationViewController: UIViewController {
     
     //MARK: - Views
     
+    @IBOutlet weak var overallStackView: UIStackView!
+    @IBOutlet weak var nameStackView: UIStackView!
+    @IBOutlet weak var schoolStackView: UIStackView!
     @IBOutlet weak var classesTaughtStackView: UIStackView!
     //MARK: - IBActions
     
     @IBAction func addClass(_ sender: Any) {
-        CourseService.createCourse(teacherID: Teacher.current.teacherID, courseTitle: addClassTextField.text!, schoolID: selectedSchool!.schoolID, completion: {(course) in
+        if addClassTextField.text! != "" {
+            courseTitles.append(addClassTextField.text!)
+            addClassTextField.text = ""
+        } else {
+            Utility.createAlert(title: "Error", message: "Please enter course title", sender: self)
+        }
 
-            if let course = course {
-                self.coursesTaught.append(course)
-            } else {
-                print("Error: Unable to create course succesfully.")
-            }
-  
-        })
-        addClassTextField.text = ""
     }
     
     @IBAction func signUp(_ sender: Any) {
-        Utility.startLoading(view: self.view)
+        //Utility.startLoading(view: self.view)
         TeacherService.createTeacher(Auth.auth().currentUser!, fullname: nameTextField.text!, schoolID: selectedSchool!.schoolID) { (teacher) in
-            Utility.endLoading()
+            //Utility.endLoading()
             guard let teacher = teacher else {
                 return
             }
             self.classesTaughtStackView.alpha = 1
+            self.nameStackView.alpha = 0
+            self.schoolStackView.alpha = 0
+            self.signUpButton.alpha = 0
+            let difference = self.schoolStackView.frame.minY - self.classesTaughtStackView.frame.minY
+            let translation = CGAffineTransform(translationX: 0, y: difference)
+            UIView.animate(withDuration: 0.5, animations: {
+                self.overallStackView.transform = translation
+            })
             self.doneButton.alpha = 1
-            Teacher.setCurrent(teacher, writeToUserDefaults: false)
+            Teacher.setCurrent(teacher, writeToUserDefaults: Utility.writeToUserDefaults)
         }
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "toCreateQuestions", sender: self)
+        
+        let dispatchGroup = DispatchGroup()
+        //Utility.startLoading(view: self.view)
+        
+        for title in courseTitles {
+            dispatchGroup.enter()
+            CourseService.createCourse(teacherID: Teacher.current.teacherID, courseTitle: title, schoolID: selectedSchool!.schoolID, completion: {(course) in
+                dispatchGroup.leave()
+                if course != nil {
+                    print("Succesfully saved course named \(course!.title)")
+                } else {
+                    Utility.createAlert(title: "Error", message: "Unable to create course succesfully.Please try again later.", sender: self)
+                }
+                
+            })
+        }
+        
+        dispatchGroup.notify(queue: .main, execute: {
+            //Utility.endLoading()
+            self.addClassTextField.resignFirstResponder()
+            self.nameTextField.resignFirstResponder()
+            self.performSegue(withIdentifier: "toCreateQuestions", sender: self)
+            //maybe I need to dismiss self here??
+        })
+        
+        
+        
+        
+        
+        
+        
+       
         
     }
    
@@ -84,6 +123,9 @@ class TeacherRegistrationViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        self.classTableView.allowsMultipleSelectionDuringEditing = false
+        nameTextField.delegate = self
+        addClassTextField.delegate = self
         classesTaughtStackView.alpha = 0
         doneButton.alpha = 0
         super.viewDidLoad()
@@ -117,6 +159,8 @@ class TeacherRegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
 
     /*
     // MARK: - Navigation
@@ -127,6 +171,7 @@ class TeacherRegistrationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
 
@@ -136,6 +181,7 @@ extension TeacherRegistrationViewController : UITableViewDelegate, UITableViewDa
         switch tableView.tag {
         case 0: //school table view case
             selectedSchool = schools[indexPath.row]
+            schoolNameTableView.reloadData()
         case 1: //courses table view case
             print("Selected table view cell in the courses taught tableview.")
         default:
@@ -148,7 +194,7 @@ extension TeacherRegistrationViewController : UITableViewDelegate, UITableViewDa
         case 0: //school search case
             return schools.count
         case 1: //classes added case
-            return coursesTaught.count
+            return courseTitles.count
         default:
             fatalError("Table view identifier error")
         }
@@ -159,14 +205,49 @@ extension TeacherRegistrationViewController : UITableViewDelegate, UITableViewDa
         let cell = UITableViewCell()
         switch tableView.tag {
         case 0: //school search case
+            if selectedSchool?.schoolID == schools[indexPath.row].schoolID {
+                cell.backgroundColor = Utility.defaultGreen
+            }
             cell.textLabel?.text = schools[indexPath.row].schoolName
         case 1: //classes added case
-            cell.textLabel?.text = coursesTaught[indexPath.row].title
+            cell.textLabel?.text = courseTitles[indexPath.row]
         default:
             fatalError("Table view identifier error")
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if tableView.tag == 0 {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // 2
+        if editingStyle == .delete {
+            ///CourseService.
+            courseTitles.remove(at: indexPath.row)
+            // 3
+            
+        }
+    }
+}
+
+extension TeacherRegistrationViewController : UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
 
 

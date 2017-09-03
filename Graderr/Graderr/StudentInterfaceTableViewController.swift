@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class StudentInterfaceTableViewController: UITableViewController {
     
@@ -14,6 +15,18 @@ class StudentInterfaceTableViewController: UITableViewController {
     
     var reviewedCoursesIDs = [String]()
     
+    @IBAction func logout(_ sender: Any) {
+        Utility.logOut(success: {(success) in
+            if success {
+                let initialViewController = UIStoryboard(name: "Login", bundle: .main).instantiateInitialViewController()
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            } else {
+                Utility.createAlert(title: "Error", message: "Unable to sign out successfully at this time.", sender: self)
+            }
+        })
+        
+    }
     override func viewDidAppear(_ animated: Bool) {
         
         StudentService.showCoursesIDsReviewedToday(forStudentID: Student.current.studentID, completion: {(courseIDs) in

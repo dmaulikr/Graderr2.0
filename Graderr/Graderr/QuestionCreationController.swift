@@ -11,11 +11,7 @@ import UIKit
 class QuestionCreationViewController: UIViewController {
     
     //MARK: - Properties
-    var questionsCreated = [(String,String)]() {
-        didSet {
-            questionsTableView.reloadData()
-        }
-    }
+    var questionsCreated = [(String,String)]()
     
     var selectedQuestionType : String? //should eventually be an enum
     var isDefaultQuestionController : Bool = true
@@ -43,6 +39,7 @@ class QuestionCreationViewController: UIViewController {
             }
             questionsCreated.append((question :questionContentTextField.text!, type: selectedQuestionType!))
             questionContentTextField.text = ""
+            questionsTableView.reloadData()
         }
         
     }
@@ -124,6 +121,8 @@ class QuestionCreationViewController: UIViewController {
         super.viewDidLoad()
         questionsTableView.delegate = self
         questionsTableView.dataSource = self
+        
+        
         
         if isDefaultQuestionController {
             promptLabel.text = "What questions would you like to ask every day?"

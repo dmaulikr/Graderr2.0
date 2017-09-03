@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
+        application.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
         FirebaseApp.configure()
         configureUI()
         
@@ -28,8 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    
     func configureUI (){
-//        UINavigationBar.appearance().backgroundColor = UIColor.init(red: 59/255, green: 209/255, blue: 134/255, alpha: 1)
+        //UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+//        UINavigationBar.appearance().backgroundColor = 
 //        UINavigationBar.appearance().tintColor = UIColor.white
 //        UINavigationBar.appearance().isTranluscent = false
 //        UINavigationBar.appearance().alpha = 1
@@ -118,6 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
     
+
 }
 
 extension AppDelegate {

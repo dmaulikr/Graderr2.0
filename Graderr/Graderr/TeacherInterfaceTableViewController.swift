@@ -10,6 +10,17 @@ import UIKit
 
 class TeacherInterfaceTableViewController: UITableViewController {
     
+    @IBAction func logOut(_ sender: Any) {
+        Utility.logOut(success: {(success) in
+            if success {
+                let initialViewController = UIStoryboard(name: "Login", bundle: .main).instantiateInitialViewController()
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            } else {
+                Utility.createAlert(title: "Error", message: "Unable to sign out successfully at this time.", sender: self)
+            }
+        })
+    }
     var coursesTaught = [Course]() {
         didSet {
             tableView.reloadData()
@@ -30,6 +41,7 @@ class TeacherInterfaceTableViewController: UITableViewController {
         
         //note, coursesTaught at index 0 is arbitrary. To be developed later more efficiently. This should, instead, simply check a teacher custom questions branch which would speed up requests a lot. However, this is better if teachers want to set custom questions for each one of their classes.
         Utility.startLoading(view: self.view)
+        
         dispatchGroup.notify(queue: .main, execute: {
             QuestionService.getCustomQuestions(forCourse: self.coursesTaught[0], completion: {(fields) in
                 Utility.endLoading()
