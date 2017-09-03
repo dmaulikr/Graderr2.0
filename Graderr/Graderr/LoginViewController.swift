@@ -59,6 +59,8 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
 }
 
 extension LoginViewController: FUIAuthDelegate {
@@ -78,57 +80,21 @@ extension LoginViewController: FUIAuthDelegate {
         StudentService.show(forUID: user.uid) { (user) in
             if let user = user {
                 // handle existing user
-                Student.setCurrent(user, writeToUserDefaults: false)
+                Student.setCurrent(user, writeToUserDefaults: Utility.writeToUserDefaults)
                 
                 let initialViewController = UIStoryboard(name: "StudentInterface", bundle: .main).instantiateInitialViewController()
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
             } else {
-                // handle new user
-                
-                
-                
-                
-//                SchoolService.createSchool(schoolName: "DPHS", adminUID: "Not Set Yet", completion: {school in
-//                    print(school)
-//                    let schoolID = school!.schoolID
-//                    
-//                    TeacherService.createTeacher(Auth.auth().currentUser!, fullname: "Matt Moran", schoolID: schoolID, completion: { (teacher) in
-//                        
-//                        StudentService.createStudent(Auth.auth().currentUser!, name: "Sean Strong", schoolID: schoolID, completion: {(student) in
-//                            
-//                            CourseService.createCourse(teacherID: teacher!.teacherID, courseTitle: "AP World History", schoolID: schoolID, completion: { (course) in
-//                                
-//                                CourseService.registerForCourse(student: student!, course: course!, success: {(success) in
-//                                    print(success! ? "Success!" : "Failure :(")
-//                                    
-//                                })
-//                                
-//                            })
-//                            
-//                        })
-//
-//                    })
-//                    
-//
-//
-//
-//                })
-                
-                
-
-                
-
-                
-                
                 self.performSegue(withIdentifier: Constants.Segue.toStudentLoginInterface, sender: self)
             }
+            
             }
         case 1 : print("Teacher login case")
         TeacherService.show(forUID: user.uid) { (user) in
             if let user = user {
                 // handle existing user
-                Teacher.setCurrent(user, writeToUserDefaults: false)
+                Teacher.setCurrent(user, writeToUserDefaults: Utility.writeToUserDefaults)
                 
                 let initialViewController = UIStoryboard(name: "TeacherInterface", bundle: .main).instantiateInitialViewController()
                 self.view.window?.rootViewController = initialViewController

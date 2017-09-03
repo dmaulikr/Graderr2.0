@@ -11,6 +11,9 @@ import FirebaseDatabase
 
 struct ReviewService {
     
+    
+    
+    
 
     
     static func showReview(forReviewID reviewID : String, completion: @escaping (Review?) -> Void) {
@@ -26,7 +29,54 @@ struct ReviewService {
     }
     
     
+    //this function essentially breaks apart a review and stores it in a much quicker way. This will allow for much faster
+    static func submitReviewAsFields(review : Review, forDateString dateString : String = Utility.dateToString(), success: @escaping (Bool) -> Void) {
+        var data = [String: Any]()
+        for field in review.fields {
+            data["answers/\(review.courseID)/\(field.title)/\(dateString)/\(review.studentID)"] = field.value
+        }
+        Database.database().reference().updateChildValues(data) { (error, _) in
+            if let error = error { fatalError(error.localizedDescription) }
+            success(true)
+        }
+    }
+    
+    //quicker retrieval using the updated database values
+    //completion returns value of type [String:Any]
+    static func getAnswers(forCourse course : Course, forQuestion question : String, forDateString dateString : String = Utility.dateToString(), completion: @escaping ([String:Any]?) -> Void) {
+        
+        let ref = Database.database().reference().child("answers").child(course.courseID).child(question).child(dateString)
+        ref.observeSingleEvent(of: .value, with: {(snapshot) in
+            guard let dict = snapshot.value as? [String:Any] else {
+                print("Unable to get reviews for this question :(")
+                return completion(nil)
+            }
+            completion(dict)
+        })
+        
+    }
+    
+    static func getAllAnswers(forCourse course : Course, forQuestion question : String, completion: @escaping ([String : [String:Any]]?) -> Void) {
+        
+        let ref = Database.database().reference().child("answers").child(course.courseID).child(question)
+        ref.observeSingleEvent(of: .value, with: {(snapshot) in
+            guard let dict = snapshot.value as? [String : [String:Any]] else {
+                print("Unable to get reviews for this question :(")
+                return completion(nil)
+            }
+            completion(dict)
+        })
+        
+    }
+    
+    
+    
     static func submitReview(review : Review, forDateString dateString : String = Utility.dateToString(), success: @escaping (Bool) -> Void) {
+        
+        ReviewService.submitReviewAsFields(review: review, success: {(success) in
+            print(success ? "Able to submit review as individual values!" : "Unable to upload review as values")
+        
+        })
         
         let data : [String: Any] = [
             "courseReviews/\(review.schoolID)/\(review.courseID)/\(dateString)/\(review.studentID)" : review.reviewID,

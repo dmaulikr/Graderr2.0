@@ -8,11 +8,27 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 import UIKit
 
 struct Utility {
     
+    static let writeToUserDefaults = true
+    
     static var activityIndicator = UIActivityIndicatorView()
+    
+    static func logOut(success: @escaping (Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+            UserDefaults.standard.synchronize()
+            success(true)
+        } catch {
+            success(false)
+        }
+        
+        
+    }
     
     static func configureActivityIndicator (view: UIView) {
         Utility.activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -34,10 +50,15 @@ struct Utility {
     //to be implemented
     static func dateToString(date : Date = Date()) -> String {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        return formatter.string(from: date)
+        formatter.dateFormat = "MM-dd-yy"
+        return "09-04-17"//formatter.string(from: date)
         
+    }
+    
+    static func stringToDate(dateString : String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yy"
+        return formatter.date(from: dateString)
     }
     
     static func newFirebaseKey() -> String {
@@ -59,5 +80,7 @@ struct Utility {
         }
         return finalDict
     }
+    
+    static let defaultGreen = UIColor.init(red: 59/255, green: 209/255, blue: 134/255, alpha: 1)
     
 }

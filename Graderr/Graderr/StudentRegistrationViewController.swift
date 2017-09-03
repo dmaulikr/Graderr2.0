@@ -29,7 +29,7 @@ class StudentRegistrationViewController: UIViewController {
     }
     
     
-    var selectedCourses = [Course]() {
+    var selectedCourses = [Course]()  {
         didSet {
             coursesTableView.reloadData()
         }
@@ -48,6 +48,7 @@ class StudentRegistrationViewController: UIViewController {
             CourseService.showAllCourses(forSchoolID: selectedSchool!.schoolID, completion: {(courses) in
                 self.courses = courses ?? []
             })
+            schoolTableView.reloadData()
 
         }
     }
@@ -55,33 +56,39 @@ class StudentRegistrationViewController: UIViewController {
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
         
-        StudentService.createStudent(Auth.auth().currentUser!, name: nameTextField.text!, schoolID: selectedSchool!.schoolID, completion: {(student) in
-            guard let student = student else {
-                print("StudentService.createStudent returned nil for student.")
-                return
-            }
-            Student.setCurrent(student, writeToUserDefaults: false)
-            let dispatchGroup = DispatchGroup()
-            
-            
-            for course in self.selectedCourses {
-                dispatchGroup.enter()
-                CourseService.registerForCourse(student: student, course: course, success: {(success) in
-                    print(success! ? "Succesfully added course named \(course.title)" : "Unable to register student for course")
-                    dispatchGroup.leave()
-                    
+        if selectedSchool == nil || selectedCourses.count == 0 || nameTextField.text! == "" {
+            Utility.createAlert(title: "Error", message: "Please make sure to fill out your name, select a school, and register for at least one course.", sender: self)
+        } else {
+            Utility.startLoading(view: self.view)
+            StudentService.createStudent(Auth.auth().currentUser!, name: nameTextField.text!, schoolID: selectedSchool!.schoolID, completion: {(student) in
+                guard let student = student else {
+                    print("StudentService.createStudent returned nil for student.")
+                    return
+                }
+                Student.setCurrent(student, writeToUserDefaults: Utility.writeToUserDefaults)
+                let dispatchGroup = DispatchGroup()
+                
+                
+                for course in self.selectedCourses {
+                    dispatchGroup.enter()
+                    CourseService.registerForCourse(student: student, course: course, success: {(success) in
+                        print(success! ? "Succesfully added course named \(course.title)" : "Unable to register student for course")
+                        dispatchGroup.leave()
+                        
+                    })
+                }
+                
+                dispatchGroup.notify(queue: .main, execute: {
+                    Utility.endLoading()
+                    self.nameTextField.resignFirstResponder()
+                    let initialViewController = UIStoryboard(name: "StudentInterface", bundle: .main).instantiateInitialViewController()!
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
                 })
-            }
-            
-            dispatchGroup.notify(queue: .main, execute: {
-                let initialViewController = UIStoryboard(name: "StudentInterface", bundle: .main).instantiateInitialViewController()!
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
+                
             })
-            
-            
-            
-        })
+        }
+
         
     }
     
@@ -94,7 +101,9 @@ class StudentRegistrationViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        nameTextField.delegate = self
         signUpButton.layer.cornerRadius = 6
+        signUpButton.alpha = 0
         super.viewDidLoad()
         schoolTableView.delegate = self
         schoolTableView.dataSource = self
@@ -113,10 +122,14 @@ class StudentRegistrationViewController: UIViewController {
     }
     
     
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     
     /*
@@ -157,11 +170,9 @@ extension StudentRegistrationViewController : UITableViewDelegate, UITableViewDa
         case 1: //courses table view case
             if selectedCourses.contains(where: {$0.courseID == courses[indexPath.row].courseID}) {
                 selectedCourses.remove(at: selectedCourses.index(where: {$0.courseID == courses[indexPath.row].courseID})!)
-                //self.tableView(tableView, cellForRowAt: indexPath).backgroundColor = UIColor.gray
                 print("Removed \(courses[indexPath.row]) from selectedCourses.")
             } else {
                 selectedCourses.append(courses[indexPath.row])
-                //self.tableView(tableView, cellForRowAt: indexPath).backgroundColor = UIColor.green
                 print("Added \(courses[indexPath.row]) to selectedCourses.")
             }
 
@@ -176,15 +187,45 @@ extension StudentRegistrationViewController : UITableViewDelegate, UITableViewDa
         case 0: //school table view case
 
             cell.textLabel?.text = schools[indexPath.row].schoolName
+            
+            if selectedSchool?.schoolID == schools[indexPath.row].schoolID {
+                cell.backgroundColor = Utility.defaultGreen
+            } else {
+                cell.backgroundColor = UIColor.white
+            }
+            
         case 1: //courses table view case
-
+            signUpButton.alpha = 1
             cell.textLabel?.text = courses[indexPath.row].title
+            if selectedCourses.contains(where: {(course) in
+                return course.courseID == courses[indexPath.row].courseID
+            
+            }) {
+                cell.backgroundColor = Utility.defaultGreen
+            } else {
+                cell.backgroundColor = UIColor.white
+            }
         default:
             print("Tag for tableview out of bounds")
         }
         return cell
     }
     
+
+ 
+}
+
+
+extension StudentRegistrationViewController : UITextFieldDelegate {
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 }
+

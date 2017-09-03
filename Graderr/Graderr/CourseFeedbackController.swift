@@ -19,6 +19,8 @@ class CourseFeedbackController: UIViewController {
     
     var currentCourse : Course?
     
+    var isOverall : Bool?
+    
     var selectedField : Field?
     
     override func viewDidLoad() {
@@ -73,6 +75,11 @@ class CourseFeedbackController: UIViewController {
             vc.desiredField = selectedField
         } else if segue.identifier == "toWritten"{
             let vc = segue.destination as! WrittenFeedbackController
+            vc.currentCourse = currentCourse
+            vc.desiredField = selectedField
+            vc.isOverall = isOverall!
+        } else if segue.identifier == "toLine" {
+            let vc = segue.destination as! OverallAnalyticsController
             vc.currentCourse = currentCourse
             vc.desiredField = selectedField
         }
@@ -133,9 +140,11 @@ extension CourseFeedbackController : UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch tableView.tag {
         case 0: //today
+            self.isOverall = false
             let fieldOfInterest = todaysMetrics[indexPath.row]
             switch fieldOfInterest.fieldType! {
             case .bool:
@@ -153,12 +162,13 @@ extension CourseFeedbackController : UITableViewDelegate, UITableViewDataSource 
             }
             
         case 1: //overall
+            self.isOverall = true
             let fieldOfInterest = overallMetrics[indexPath.row]
             switch fieldOfInterest.fieldType! {
             case .bool:
                 print("\(fieldOfInterest.title), of type bool")
                 selectedField = fieldOfInterest
-                performSegue(withIdentifier: "toPie", sender: self)
+                performSegue(withIdentifier: "toLine", sender: self)
             case .written:
                 print("\(fieldOfInterest.title), of type written")
                 selectedField = fieldOfInterest
@@ -166,7 +176,7 @@ extension CourseFeedbackController : UITableViewDelegate, UITableViewDataSource 
             case .numeric:
                 print("\(fieldOfInterest.title), of type numeric")
                 selectedField = fieldOfInterest
-                performSegue(withIdentifier: "toPie", sender: self)
+                performSegue(withIdentifier: "toLine", sender: self)
                 
             }
             
