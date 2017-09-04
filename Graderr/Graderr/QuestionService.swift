@@ -34,7 +34,8 @@ struct QuestionService {
             
             ref.setValue(finalDict) { (error,ref) in
                 if let error = error {
-                    fatalError(error.localizedDescription)
+                    print(error.localizedDescription)
+                    return success(false)
                 }
                 success(true)
             }

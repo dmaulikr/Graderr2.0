@@ -52,6 +52,7 @@ class PollSubmissionTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        self.navigationItem.title = currentCourse?.title
         super.viewDidLoad()
         Utility.startLoading(view: self.view)
         QuestionService.getCustomQuestions(forCourse: currentCourse!, completion: {(fields) in

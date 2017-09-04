@@ -51,7 +51,7 @@ struct Utility {
     static func dateToString(date : Date = Date()) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yy"
-        return "09-04-17"//formatter.string(from: date)
+        return formatter.string(from: date)
         
     }
     

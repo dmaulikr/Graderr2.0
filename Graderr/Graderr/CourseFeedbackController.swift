@@ -46,7 +46,7 @@ class CourseFeedbackController: UIViewController {
         
         QuestionService.getDefaultCourseQuestions(forCourse: currentCourse!, completion:{ (fields) in
             guard let fields = fields else {
-                fatalError("Error obtaining custom questions for this course")
+                fatalError("Error obtaining default questions for this course")
             }
             self.overallMetrics = fields
             self.overallTableView.reloadData()

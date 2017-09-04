@@ -31,12 +31,15 @@ class LoginViewController: UIViewController {
         teacherLoginButton.layer.cornerRadius = 6
         
         super.viewDidLoad()
+
     }
     
     // MARK: - IBActions
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
+
         
+
         selectedController = sender.tag
         // 1
         guard let authUI = FUIAuth.defaultAuthUI()

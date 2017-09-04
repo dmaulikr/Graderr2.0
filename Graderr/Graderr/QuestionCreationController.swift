@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionCreationViewController: UIViewController {
+class QuestionCreationViewController: UIViewController{
     
     //MARK: - Properties
     var questionsCreated = [(String,String)]()
@@ -119,6 +119,7 @@ class QuestionCreationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        questionContentTextField.delegate = self
         questionsTableView.delegate = self
         questionsTableView.dataSource = self
         
@@ -137,6 +138,10 @@ class QuestionCreationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        questionContentTextField.resignFirstResponder()
     }
     
     
@@ -182,6 +187,20 @@ extension QuestionCreationViewController : UITableViewDelegate, UITableViewDataS
     
     
 }
+
+extension QuestionCreationViewController : UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}
+
 
 
 
